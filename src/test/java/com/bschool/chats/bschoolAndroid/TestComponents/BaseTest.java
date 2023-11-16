@@ -12,10 +12,9 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
-import com.bschool.chats.bschoolAndroid.pageojects.LaunchPage;
-
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -27,8 +26,12 @@ public class BaseTest {
 	public static AndroidDriver dr;
 	public static WebDriver driver;
 	Properties prop = new Properties();
-	// Properties file extraction
 	
+	// Create objects of pages
+	public LaunchPage launchPage = new LaunchPage(dr);
+	public LoginPage loginPage = new LoginPage(dr);
+	public CreateEventPage createEventPage = new CreateEventPage(dr);
+
 	
 	public AndroidDriver initializeDriver(String deviceName) throws MalformedURLException
 	{
@@ -61,22 +64,41 @@ public class BaseTest {
 	
 	}
 	
-	public void logintoApp() throws MalformedURLException
+	@BeforeMethod
+	public CreateEventPage logintoApp() throws MalformedURLException
 	{
 		String deviceName = "Pixel 4 API 33";
 		initializeDriver(deviceName);
-		LaunchPage launchPage = new LaunchPage(dr);
+		
 		launchPage.ClickAllow();
 		launchPage.ClickSkip();
-		LoginPage loginPage = new LoginPage(dr);
+		
 		loginPage.fill_schoolEmail(prop.getProperty("schoolemail"));
 		loginPage.fill_password(prop.getProperty("password"));
 		loginPage.ClickLogin();
-		
-		
+		return createEventPage;	
 		
 	}
 	
+	public CreateEventPage logintoSecondDevice() throws MalformedURLException
+	{
+		String deviceName = "Pixel 4 API 33";
+		initializeDriver(deviceName);
+		
+		launchPage.ClickAllow();
+		launchPage.ClickSkip();
+		
+		loginPage.fill_schoolEmail(prop.getProperty("schoolemail"));
+		loginPage.fill_password(prop.getProperty("password"));
+		loginPage.ClickLogin();
+		return createEventPage;	
+		
+	}
+	
+	@AfterMethod
+	public void tearDown() {
+		dr.close();
+	}
 	
 
 }
