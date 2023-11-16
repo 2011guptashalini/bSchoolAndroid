@@ -8,32 +8,38 @@ import com.bschool.chats.bschoolAndroid.AbstractComponents.AbstractComponents;
 
 import io.appium.java_client.android.AndroidDriver;
 
-public class LaunchPage extends AbstractComponents {
+public class CreateEventPage extends AbstractComponents {
 	
 	AndroidDriver dr;
-	public LaunchPage(AndroidDriver dr) {
+	public CreateEventPage(AndroidDriver dr) {
 		super(dr);
 		this.dr = dr;
 		PageFactory.initElements(dr, this);
 	}
-	// This needs to be changed
 	
-	@FindBy(id="com.android.permissioncontroller:id/permission_allow_button")
-	WebElement allow;
+	//This needs to be changed
 	
-	@FindBy(id="skip")
-	WebElement skip;
+	@FindBy(id="school_email")
+	WebElement school_email;
+	
+	@FindBy(id="password")
+	WebElement password_ele;
 	
 	@FindBy(id="login")
 	WebElement login;
 	
-	public void ClickAllow() {
-		allow.click();
+	public void fill_schoolEmail(String schoolemail) {
+		school_email.sendKeys(schoolemail);;
 	}
 	
-	public void ClickSkip() {
+	public void fill_password(String password) {
+		password_ele.sendKeys(password);;
+	}
+	
+	public void ClickLogin() {
 		login.click();
 	}
+	
 	
 	
 
