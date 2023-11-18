@@ -17,30 +17,17 @@ public class CreateEventPage extends AbstractComponents {
 		PageFactory.initElements(dr, this);
 	}
 	
-	//This needs to be changed
 	
-	@FindBy(id="school_email")
-	WebElement school_email;
+@FindBy(xpath="//h1[text()='News Feed']")
+WebElement newsFeed;
 	
-	@FindBy(id="password")
-	WebElement password_ele;
-	
-	@FindBy(id="login")
-	WebElement login;
-	
-	public void fill_schoolEmail(String schoolemail) {
-		school_email.sendKeys(schoolemail);;
-	}
-	
-	public void fill_password(String password) {
-		password_ele.sendKeys(password);;
-	}
-	
-	public void ClickLogin() {
-		login.click();
-	}
-	
+public Boolean VerifyNewsFeedDisplayed() {
+	Boolean match = newsFeed.isDisplayed();
+	return match;
+
+
+}
+}
 	
 	
 
-}

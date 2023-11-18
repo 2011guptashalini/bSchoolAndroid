@@ -10,10 +10,10 @@ import io.appium.java_client.android.AndroidDriver;
 
 public class LaunchPage extends AbstractComponents {
 	
-	AndroidDriver dr;
+	AndroidDriver driver;
 	public LaunchPage(AndroidDriver dr) {
 		super(dr);
-		this.dr = dr;
+		this.driver = dr;
 		PageFactory.initElements(dr, this);
 	}
 	// This needs to be changed
@@ -32,8 +32,23 @@ public class LaunchPage extends AbstractComponents {
 	}
 	
 	public void ClickSkip() {
+		skip.click();
+	}
+	
+	public void ClickLoginLink() {
 		login.click();
 	}
+	
+	// Reaching to login page
+	public LoginPage goTo() {
+		ClickAllow();
+		ClickSkip();
+		ClickLoginLink();
+		LoginPage loginPage = new LoginPage(driver);
+		return loginPage;
+		
+	}
+
 	
 	
 

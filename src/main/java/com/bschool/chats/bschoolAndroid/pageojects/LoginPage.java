@@ -10,11 +10,11 @@ import io.appium.java_client.android.AndroidDriver;
 
 public class LoginPage extends AbstractComponents {
 	
-	AndroidDriver dr;
-	public LoginPage(AndroidDriver dr) {
-		super(dr);
-		this.dr = dr;
-		PageFactory.initElements(dr, this);
+	AndroidDriver driver;
+	public LoginPage(AndroidDriver driver) {
+		super(driver);
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
 	}
 	// This needs to be changed
 	@FindBy(id="school_email")
@@ -26,16 +26,15 @@ public class LoginPage extends AbstractComponents {
 	@FindBy(id="login")
 	WebElement login;
 	
-	public void fill_schoolEmail(String schoolemail) {
-		school_email.sendKeys(schoolemail);;
-	}
-	
-	public void fill_password(String password) {
-		password_ele.sendKeys(password);;
-	}
-	
-	public void ClickLogin() {
+	// login to the app
+	public CreateEventPage loginApplication(String email, String password) {
+		school_email.sendKeys(email);
+		password_ele.sendKeys(password);
 		login.click();
+		CreateEventPage createEventPage = new CreateEventPage(driver);
+		return createEventPage;
+		
+		
 	}
 	
 	
