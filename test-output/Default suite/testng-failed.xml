@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.bschool.chats.bschoolAndroid.tests.LaunchAppTest">
+      <class name="com.bschool.chats.bschoolAndroid.tests.EventPageTest">
         <methods>
-          <include name="launchApp"/>
+          <include name="eventPage_addEventTest"/>
+          <include name="logintoApp"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.bschool.chats.bschoolAndroid.tests.LaunchAppTest -->
+      </class> <!-- com.bschool.chats.bschoolAndroid.tests.EventPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

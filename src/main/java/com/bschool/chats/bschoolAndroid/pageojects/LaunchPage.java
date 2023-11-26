@@ -18,18 +18,14 @@ public class LaunchPage extends AbstractComponents {
 	}
 	// This needs to be changed
 	
-	@FindBy(id="com.android.permissioncontroller:id/permission_allow_button")
-	WebElement allow;
 	
-	@FindBy(id="skip")
-	WebElement skip;
+	@FindBy(xpath="//android.widget.TextView[@content-desc=\"SkipVideoButton\"]")
+	WebElement skip; //= driver.findElement(AppiumBy.accessibilityId("SkipVideoButton"));
 	
-	@FindBy(id="login")
+	@FindBy(xpath="//android.widget.TextView[@text=\"Login\"]")
 	WebElement login;
 	
-	public void ClickAllow() {
-		allow.click();
-	}
+
 	
 	public void ClickSkip() {
 		skip.click();
@@ -41,9 +37,12 @@ public class LaunchPage extends AbstractComponents {
 	
 	// Reaching to login page
 	public LoginPage goTo() {
-		ClickAllow();
+		
+		waitForAWhile(10);
 		ClickSkip();
+		waitForAWhile(5);
 		ClickLoginLink();
+		waitForAWhile(10);
 		LoginPage loginPage = new LoginPage(driver);
 		return loginPage;
 		

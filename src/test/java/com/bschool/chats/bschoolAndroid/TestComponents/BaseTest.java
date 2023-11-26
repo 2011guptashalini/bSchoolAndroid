@@ -4,9 +4,14 @@ import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Properties;
+
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.touch.offset.PointOption;
+
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import com.bschool.chats.bschoolAndroid.pageojects.*;
 
@@ -18,7 +23,8 @@ public class BaseTest {
 	// Create objects of pages
 	public LaunchPage launchPage; 
 	public LoginPage loginPage;
-	public CreateEventPage createEventPage;
+	public HomePage homePage;
+	public EventPage eventPage;
 
 	
 	public AndroidDriver initializeDriver(String deviceName) throws MalformedURLException, URISyntaxException
@@ -36,14 +42,18 @@ public class BaseTest {
 	
 	
 	@BeforeMethod
-	public LoginPage logintoApp() throws MalformedURLException, URISyntaxException
+	public HomePage logintoApp() throws MalformedURLException, URISyntaxException
 	{
-		String deviceName = "Pixel 4 API 33";
+		String deviceName = "Pixel 7 Pro API 30";
 		initializeDriver(deviceName);
-		LaunchPage launchPage = new LaunchPage(driver);
+		launchPage = new LaunchPage(driver);
 		launchPage.goTo();
-		LoginPage loginPage = new LoginPage(driver);
-		return loginPage;	
+		loginPage = new LoginPage(driver);
+		loginPage.loginApplication("ntr8igay4h@mailers.edu.pl", "kingofstl1");
+		homePage = new HomePage(driver);
+		//loginPage.loginApplication("test", "test");
+		return homePage;
+		
 		
 	}
 	
@@ -52,18 +62,19 @@ public class BaseTest {
 		String deviceName = null;
 		initializeDriver(deviceName);
 		
-		LaunchPage launchPage = new LaunchPage(driver);
+		launchPage = new LaunchPage(driver);
 		launchPage.goTo();
-		LoginPage loginPage = new LoginPage(driver);
-		
+		loginPage = new LoginPage(driver);		
 		return loginPage;
 		
 	}
+
 	
 	
 	@AfterMethod
 	public void tearDown() {
-		driver.close();
+		driver.quit();
+		//driver.close();
 	}
 	
 
