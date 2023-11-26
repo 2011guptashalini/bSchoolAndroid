@@ -1,5 +1,7 @@
 package com.bschool.chats.bschoolAndroid.TestComponents;
 
+import java.io.File;
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -11,6 +13,10 @@ import io.appium.java_client.touch.offset.PointOption;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import com.bschool.chats.bschoolAndroid.pageojects.*;
@@ -68,7 +74,16 @@ public class BaseTest {
 		return loginPage;
 		
 	}
-
+	public String getScreenshot(String testCaseName,AndroidDriver driver) throws IOException
+	{
+		TakesScreenshot ts = (TakesScreenshot)driver;
+		File source = ts.getScreenshotAs(OutputType.FILE);
+		File file = new File(System.getProperty("user.dir") + "//reports//" + testCaseName + ".png");
+		FileUtils.copyFile(source, file);
+		return System.getProperty("user.dir") + "//reports//" + testCaseName + ".png";
+		
+		
+	}
 	
 	
 	@AfterMethod
