@@ -5,8 +5,10 @@ import java.util.Date;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.PointerInput;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.interactions.PointerInput.Origin;
 
 import com.bschool.chats.bschoolAndroid.AbstractComponents.AbstractComponents;
 
@@ -114,25 +116,35 @@ public class EventPage extends AbstractComponents {
 	@FindBy(xpath="//android.widget.TextView[@content-desc=\"CreateEventSubmitButton\"]")
 	WebElement addEventCreateEventElement;
 	
-	//Allow button
-	@FindBy(xpath="//android.widget.Button[@resource-id=\"com.android.permissioncontroller:id/permission_allow_button\"]")
-	WebElement addEventAllowElement;
+	//Deny button
+	@FindBy(xpath="//android.widget.Button[@resource-id=\"com.android.permissioncontroller:id/permission_deny_button\"]")
+	WebElement addEventDenyElement;
 	
-	//Next page
-	@FindBy(xpath="//android.widget.ImageView[@content-desc=\"next page\"]")
-	WebElement addEventNextElement;
+	//Ok Button
+	@FindBy(xpath="//android.widget.Button[@resource-id=\"android:id/button1\"]")
+	WebElement addEventOKElement;
 	
 	//Got it
-	@FindBy(xpath="//android.widget.Button[@resource-id=\"com.google.android.calendar:id/done_button\"]")
-	WebElement addEventGotItElement;
+	//@FindBy(xpath="//android.widget.Button[@resource-id=\"com.google.android.calendar:id/done_button\"]")
+	//WebElement addEventGotItElement;
 	
 	//Select color and Graphite
-	@FindBy(xpath="//android.widget.TextView[@resource-id=\"com.google.android.calendar:id/first_line_text\" and @text=\"Graphite\"]")
-	WebElement addEventColorElement;
+	//@FindBy(xpath="//android.widget.TextView[@resource-id=\"com.google.android.calendar:id/first_line_text\" and @text=\"Graphite\"]")
+	//WebElement addEventColorElement;
 	
 	//Save event
-	@FindBy(xpath="//android.widget.Button[@resource-id=\"com.google.android.calendar:id/save\"]")
-	WebElement addEventSaveElement;
+	//@FindBy(xpath="//android.widget.Button[@resource-id=\"com.google.android.calendar:id/save\"]")
+	//WebElement addEventSaveElement;
+	
+	//Save event
+	
+	public WebElement dynamicXpathGenerator(String str) {
+		String xpathStr = "\"" + str + "\"";
+		WebElement dynamicXpath = driver.findElement(By.xpath("//android.widget.TextView[@text="+xpathStr+"]"));
+		return dynamicXpath;
+	}
+	
+	
 	
 	
 
@@ -142,7 +154,7 @@ public class EventPage extends AbstractComponents {
 	
 	public void addImage() {
 		addEvenAddImageElement.click();
-		waitForAWhile(10);
+		waitForAWhile(15);
 		addEventRecentElement.click();
 		
 			
@@ -164,17 +176,20 @@ public class EventPage extends AbstractComponents {
 		addEventEndTimeAndDateElement.click();
 		addEventSelectDateDoneElement.click();
 		addEventShortDescriptionElement.sendKeys("This is a short description");	
-		scrollApp();
+		scroll(ScrollDirection.DOWN, 0.5);
 		
 	}
+
 	
 	//Method to create event and handling google related stuff
 	public void createEvent()
 	{
 		
 		addEventCreateEventElement.click();
-		addEventAllowElement.click();
-		//addEventSaveElement.click();		
+		addEventDenyElement.click();
+		addEventOKElement.click();	
+		waitForAWhile(20);
+		scroll(ScrollDirection.DOWN, 1.0);
 		
 	}
 	
@@ -199,9 +214,12 @@ public class EventPage extends AbstractComponents {
 	
 	public Boolean VerifyEventIsAdded() {
 		
-		
-		Boolean match = addEventSaveElement.isDisplayed();	
+		WebElement addedEvent = dynamicXpathGenerator(EventName);
+		Boolean match = addedEvent.isDisplayed();
 		return match;
+		
+		//Boolean match = addEventSaveElement.isDisplayed();	
+		//return match;
 
 	}
 	
