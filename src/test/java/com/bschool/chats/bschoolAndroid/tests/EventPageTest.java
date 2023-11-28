@@ -19,11 +19,11 @@ public class EventPageTest extends BaseTest {
 	{			
 		    eventPage = homePage.goToEventPage();
 			Boolean match = eventPage.VerifyEventPageDisplayed();
-			Assert.assertTrue(match);
+			Assert.assertTrue(match, "Event page is displayed");
 			match = eventPage.VerifyAllEventDisplayed();
-			Assert.assertTrue(match);
+			Assert.assertTrue(match, "All events are displayed");
 			match = eventPage.VerifyPastEventDisplayed();
-			Assert.assertTrue(match);
+			Assert.assertTrue(match, "Past event is displayed");
 			
 		}
 		
@@ -33,15 +33,53 @@ public class EventPageTest extends BaseTest {
 		eventPage = homePage.goToEventPage();
 		eventPage.clickAddEvent();
 		eventPage.addImage();
+		Boolean match = eventPage.VerifyPhotoOptionsDisplayed();
+		Assert.assertTrue(match, "Options to select photo is displayed");
+		
+		match = eventPage.VerifyImageIsUploaded();
+		Assert.assertTrue(match, "Photo is uploaded and app returned back to adding event page");
+		
 		eventPage.addEventDetails();
 		eventPage.createEvent();
-		Boolean match = eventPage.VerifyEventIsAdded();
-		Assert.assertTrue(match);
+		match = eventPage.VerifyEventIsAdded();
+		Assert.assertTrue(match, "Event is added and displayed");
 	}
 	
 	@Test(groups= {"Smoke"})
-	public void eventPage_viewPastEvents()
+	public void eventPage_editEvent()
 	{
+		eventPage = homePage.goToEventPage();
+		eventPage.clickAddEvent();
+		
+		eventPage.addImage();
+		Boolean match = eventPage.VerifyPhotoOptionsDisplayed();
+		Assert.assertTrue(match, "Options to select photo is displayed");
+		
+		match = eventPage.VerifyImageIsUploaded();
+		Assert.assertTrue(match, "Photo is uploaded and app returned back to adding event page");
+		
+		eventPage.addEventDetails();
+		eventPage.createEvent();
+		match = eventPage.VerifyEventIsAdded();
+		Assert.assertTrue(match, "Event is added and displayed");
+		
+		eventPage.ClickEditEvent();
+		eventPage.ClickEditButton();
+		eventPage.UpdateCategory();
+		
+		match = eventPage.CategoryUpdatedAfterSaveIsDisplayed();
+		Assert.assertTrue(match, "Category is updated");
+		
+		eventPage.UpdatingLink();
+		match = eventPage.AddLinkPopupIsDisplayed();
+		Assert.assertTrue(match, "Add Link popup is displayed");
+		
+		
+		match = eventPage.AddedLinkAfterUpdatingIsDisplayed();
+		Assert.assertTrue(match, "Link is added successfully");
+		
+		
+		
 		
 	}
 	

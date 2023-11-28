@@ -50,7 +50,7 @@ public class BaseTest {
 	@BeforeMethod
 	public HomePage logintoApp() throws MalformedURLException, URISyntaxException
 	{
-		String deviceName = "Pixel 7 Pro API 30";
+		String deviceName = "Pixel 7 API 30";
 		initializeDriver(deviceName);
 		launchPage = new LaunchPage(driver);
 		launchPage.goTo();
