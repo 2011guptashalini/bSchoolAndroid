@@ -37,6 +37,51 @@ public class ChatPage extends AbstractComponents {
 	@FindBy(xpath="//android.widget.TextView[@text=\"Recent Chat Messages \"]")
 	WebElement recentChats;
 	
+	//Cover image
+	@FindBy(xpath="//android.widget.TextView[@text=\"+\"]")
+	WebElement coverImages;
+	
+	//Select an smiley, no xpath as of now
+	
+	//Group name , no xpath as of now
+	
+	//Close smileys popup
+	@FindBy(xpath="//android.widget.TextView[@text=\"X\"]")
+	WebElement closeButtonForSmileys;
+	
+	//Group type public
+	@FindBy(xpath="//android.view.ViewGroup[@content-desc=\"CreateChatTypePublicButton\"]")
+	WebElement groupTypePublic;
+	
+	//Group type public
+	@FindBy(xpath="//android.widget.TextView[@text=\"Add Member\"]")
+	WebElement addMember;
+	
+	//Create group
+	@FindBy(xpath="//android.widget.TextView[@text=\"Create Group\"]")
+	WebElement createGroup;
+	
+	//Member 1
+	@FindBy(xpath="//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup")
+	WebElement member1;
+	
+	//Member 2
+	@FindBy(xpath="//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup")
+	WebElement member2;
+	
+	//Invite member
+	@FindBy(xpath="//android.widget.TextView[@text=\"Invite friend\"]")
+	WebElement inviteMember;
+	
+	//This will be used for asserting but need to take the xpath dynamically as it is based on group name
+	@FindBy(xpath="//android.widget.TextView[@text=\"techno group\"]")
+	WebElement createdGroup;
+	
+	//Message box
+	@FindBy(xpath="//android.widget.EditText[@resource-id=\"auto-complete-text-input\"]")
+	WebElement sendMessageTextBox;
+	
+
 	
 	//Methods
 	public Boolean VerifyChatHeadingIsDisplayed() {
