@@ -197,6 +197,10 @@ public class EventPage extends AbstractComponents {
 	@FindBy(xpath="//android.widget.TextView[@text=\"Discussion\"]")
 	WebElement discussionTab;
 	
+	//Write comment here
+	@FindBy(xpath="//android.widget.EditText[@text=\"Write comment here…\"]")
+	WebElement commentTextBox;
+	
 	
 	
 	

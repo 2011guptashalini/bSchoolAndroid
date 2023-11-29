@@ -1,6 +1,7 @@
 package com.bschool.chats.bschoolAndroid.tests;
 
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.HashMap;
