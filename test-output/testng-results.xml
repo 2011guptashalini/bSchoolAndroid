@@ -1,89 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-11-29T15:09:03 IST" name="Suite" finished-at="2023-11-29T15:11:53 IST" duration-ms="170139">
+  <suite started-at="2023-11-29T15:45:15 IST" name="Default suite" finished-at="2023-11-29T15:45:36 IST" duration-ms="20381">
     <groups>
       <group name="Smoke">
-        <method signature="EventPageTest.eventPage_addEventTest()[pri:0, instance:com.bschool.chats.bschoolAndroid.tests.EventPageTest@5b247367]" name="eventPage_addEventTest" class="com.bschool.chats.bschoolAndroid.tests.EventPageTest"/>
-        <method signature="EventPageTest.eventPage_displayedTest()[pri:0, instance:com.bschool.chats.bschoolAndroid.tests.EventPageTest@5b247367]" name="eventPage_displayedTest" class="com.bschool.chats.bschoolAndroid.tests.EventPageTest"/>
-        <method signature="EventPageTest.eventPage_editEvent()[pri:0, instance:com.bschool.chats.bschoolAndroid.tests.EventPageTest@5b247367]" name="eventPage_editEvent" class="com.bschool.chats.bschoolAndroid.tests.EventPageTest"/>
-        <method signature="EventPageTest.eventPage_readDetails()[pri:0, instance:com.bschool.chats.bschoolAndroid.tests.EventPageTest@5b247367]" name="eventPage_readDetails" class="com.bschool.chats.bschoolAndroid.tests.EventPageTest"/>
-        <method signature="HomePageTest.homePage_displayedTest(java.util.HashMap)[pri:0, instance:com.bschool.chats.bschoolAndroid.tests.HomePageTest@5149d738]" name="homePage_displayedTest" class="com.bschool.chats.bschoolAndroid.tests.HomePageTest"/>
+        <method signature="ChatPageTest.eventPage_displayedTest()[pri:0, instance:com.bschool.chats.bschoolAndroid.tests.ChatPageTest@25ce9dc4]" name="eventPage_displayedTest" class="com.bschool.chats.bschoolAndroid.tests.ChatPageTest"/>
       </group> <!-- Smoke -->
     </groups>
-    <test started-at="2023-11-29T15:09:03 IST" name="Test" finished-at="2023-11-29T15:11:53 IST" duration-ms="170139">
-      <class name="com.bschool.chats.bschoolAndroid.tests.HomePageTest">
-        <test-method is-config="true" signature="logintoApp()[pri:0, instance:com.bschool.chats.bschoolAndroid.tests.HomePageTest@5149d738]" started-at="2023-11-29T15:09:03 IST" name="logintoApp" finished-at="2023-11-29T15:09:19 IST" duration-ms="15181" status="PASS">
+    <test started-at="2023-11-29T15:45:15 IST" name="Default test" finished-at="2023-11-29T15:45:36 IST" duration-ms="20381">
+      <class name="com.bschool.chats.bschoolAndroid.tests.ChatPageTest">
+        <test-method is-config="true" signature="logintoApp()[pri:0, instance:com.bschool.chats.bschoolAndroid.tests.ChatPageTest@25ce9dc4]" started-at="2023-11-29T15:45:15 IST" name="logintoApp" finished-at="2023-11-29T15:45:27 IST" duration-ms="12342" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logintoApp -->
-        <test-method signature="homePage_displayedTest(java.util.HashMap)[pri:0, instance:com.bschool.chats.bschoolAndroid.tests.HomePageTest@5149d738]" started-at="2023-11-29T15:09:19 IST" name="homePage_displayedTest" data-provider="getData" finished-at="2023-11-29T15:09:23 IST" duration-ms="4202" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{password=kingofstl1, email=ntr8igay4h@mailers.edu.pl}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- homePage_displayedTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.bschool.chats.bschoolAndroid.tests.HomePageTest@5149d738]" started-at="2023-11-29T15:09:23 IST" name="tearDown" finished-at="2023-11-29T15:09:23 IST" duration-ms="439" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.bschool.chats.bschoolAndroid.tests.HomePageTest -->
-      <class name="com.bschool.chats.bschoolAndroid.tests.EventPageTest">
-        <test-method is-config="true" signature="logintoApp()[pri:0, instance:com.bschool.chats.bschoolAndroid.tests.EventPageTest@5b247367]" started-at="2023-11-29T15:09:23 IST" name="logintoApp" finished-at="2023-11-29T15:09:35 IST" duration-ms="11800" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logintoApp -->
-        <test-method signature="eventPage_addEventTest()[pri:0, instance:com.bschool.chats.bschoolAndroid.tests.EventPageTest@5b247367]" started-at="2023-11-29T15:09:35 IST" name="eventPage_addEventTest" finished-at="2023-11-29T15:10:05 IST" duration-ms="29641" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- eventPage_addEventTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.bschool.chats.bschoolAndroid.tests.EventPageTest@5b247367]" started-at="2023-11-29T15:10:05 IST" name="tearDown" finished-at="2023-11-29T15:10:05 IST" duration-ms="392" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="logintoApp()[pri:0, instance:com.bschool.chats.bschoolAndroid.tests.EventPageTest@5b247367]" started-at="2023-11-29T15:10:05 IST" name="logintoApp" finished-at="2023-11-29T15:10:17 IST" duration-ms="11539" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logintoApp -->
-        <test-method signature="eventPage_displayedTest()[pri:0, instance:com.bschool.chats.bschoolAndroid.tests.EventPageTest@5b247367]" started-at="2023-11-29T15:10:17 IST" name="eventPage_displayedTest" finished-at="2023-11-29T15:10:23 IST" duration-ms="6024" status="PASS">
+        <test-method signature="eventPage_displayedTest()[pri:0, instance:com.bschool.chats.bschoolAndroid.tests.ChatPageTest@25ce9dc4]" started-at="2023-11-29T15:45:27 IST" name="eventPage_displayedTest" finished-at="2023-11-29T15:45:35 IST" duration-ms="7590" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- eventPage_displayedTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.bschool.chats.bschoolAndroid.tests.EventPageTest@5b247367]" started-at="2023-11-29T15:10:23 IST" name="tearDown" finished-at="2023-11-29T15:10:23 IST" duration-ms="502" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.bschool.chats.bschoolAndroid.tests.ChatPageTest@25ce9dc4]" started-at="2023-11-29T15:45:35 IST" name="tearDown" finished-at="2023-11-29T15:45:35 IST" duration-ms="394" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="logintoApp()[pri:0, instance:com.bschool.chats.bschoolAndroid.tests.EventPageTest@5b247367]" started-at="2023-11-29T15:10:23 IST" name="logintoApp" finished-at="2023-11-29T15:10:35 IST" duration-ms="12267" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logintoApp -->
-        <test-method signature="eventPage_editEvent()[pri:0, instance:com.bschool.chats.bschoolAndroid.tests.EventPageTest@5b247367]" started-at="2023-11-29T15:10:35 IST" name="eventPage_editEvent" finished-at="2023-11-29T15:11:09 IST" duration-ms="33955" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- eventPage_editEvent -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.bschool.chats.bschoolAndroid.tests.EventPageTest@5b247367]" started-at="2023-11-29T15:11:09 IST" name="tearDown" finished-at="2023-11-29T15:11:10 IST" duration-ms="413" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="logintoApp()[pri:0, instance:com.bschool.chats.bschoolAndroid.tests.EventPageTest@5b247367]" started-at="2023-11-29T15:11:10 IST" name="logintoApp" finished-at="2023-11-29T15:11:22 IST" duration-ms="12420" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logintoApp -->
-        <test-method signature="eventPage_readDetails()[pri:0, instance:com.bschool.chats.bschoolAndroid.tests.EventPageTest@5b247367]" started-at="2023-11-29T15:11:22 IST" name="eventPage_readDetails" finished-at="2023-11-29T15:11:53 IST" duration-ms="30607" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- eventPage_readDetails -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.bschool.chats.bschoolAndroid.tests.EventPageTest@5b247367]" started-at="2023-11-29T15:11:53 IST" name="tearDown" finished-at="2023-11-29T15:11:53 IST" duration-ms="397" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.bschool.chats.bschoolAndroid.tests.EventPageTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+      </class> <!-- com.bschool.chats.bschoolAndroid.tests.ChatPageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

@@ -30,9 +30,16 @@ public Boolean VerifyHomePageDisplayed() {
 
 public EventPage goToEventPage() {
 	
-	clickEvent();
+	clickEvents();
 	EventPage eventPage = new EventPage(driver);
 	return eventPage;
+}
+
+public ChatPage goToChatPage() {
+	
+	clickChat();
+	ChatPage chatPage = new ChatPage(driver);
+	return chatPage;
 }
 
 

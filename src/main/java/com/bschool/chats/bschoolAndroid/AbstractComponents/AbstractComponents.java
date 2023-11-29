@@ -1,7 +1,6 @@
 package com.bschool.chats.bschoolAndroid.AbstractComponents;
 
 import java.time.Duration;
-import java.util.Arrays;
 
 import org.openqa.selenium.By;
 
@@ -22,7 +21,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.google.common.collect.ImmutableList;
 
-//import org.openqa.selenium.interactions.touch.TouchActions;
 
 // this class will have common methods of the app under test
 public class AbstractComponents { 
@@ -50,21 +48,6 @@ public class AbstractComponents {
 
 	}
 	
-	
-	public void scrollApp () {
-		final var finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
-	    var start = new Point(1078, 2160);
-	    var end = new Point (1137, 413);
-	    var swipe = new Sequence(finger, 1);
-	    swipe.addAction(finger.createPointerMove(Duration.ofMillis(0),
-	        PointerInput.Origin.viewport(), start.getX(), start.getY()));
-	    swipe.addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
-	    swipe.addAction(finger.createPointerMove(Duration.ofMillis(1000),
-	        PointerInput.Origin.viewport(), end.getX(), end.getY()));
-	    swipe.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
-	    driver.perform(Arrays.asList(swipe));
-		
-	}
 	
 	
 	public enum ScrollDirection {
@@ -95,20 +78,6 @@ public class AbstractComponents {
 		
 	}
 	
-	public void scrollDate() {
-		final var finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
-		var start = new Point(520, 2798);
-		var end = new Point (536, 2209);
-		var swipe = new Sequence(finger, 1);
-		swipe.addAction(finger.createPointerMove(Duration.ofMillis(0),
-		    PointerInput.Origin.viewport(), start.getX(), start.getY()));
-		swipe.addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
-		swipe.addAction(finger.createPointerMove(Duration.ofMillis(1000),
-		    PointerInput.Origin.viewport(), end.getX(), end.getY()));
-		swipe.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
-		driver.perform(Arrays.asList(swipe));
-	}
-	
 	
 	
 	public void swipe(Point start, Point end, Duration duration) {
@@ -131,11 +100,23 @@ public class AbstractComponents {
 }
 	
 	//Application specific methods and elements
+	
+	// Events
 	@FindBy(xpath="//android.widget.TextView[@text=\"Events\"]")
 	WebElement eventMenuElement;
 	
-	public void clickEvent() {
+	
+	// Events
+	@FindBy(xpath="//android.widget.TextView[@text=\"Chats\"]")
+	WebElement chatMenuElement;
+		
+	
+	public void clickEvents() {
 		eventMenuElement.click();
+	}
+	
+	public void clickChat() {
+		chatMenuElement.click();
 	}
 	
 	

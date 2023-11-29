@@ -7,17 +7,15 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Properties;
 
-import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.touch.offset.PointOption;
+
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+
 import org.openqa.selenium.remote.DesiredCapabilities;
 import com.bschool.chats.bschoolAndroid.pageojects.*;
 
@@ -31,7 +29,7 @@ public class BaseTest {
 	public LoginPage loginPage;
 	public HomePage homePage;
 	public EventPage eventPage;
-
+	public ChatPage chatPage;
 	
 	public AndroidDriver initializeDriver(String deviceName) throws MalformedURLException, URISyntaxException
 	{
