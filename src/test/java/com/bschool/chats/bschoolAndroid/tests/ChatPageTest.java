@@ -14,9 +14,10 @@ import org.testng.annotations.Test;
 
 import com.bschool.chats.bschoolAndroid.Data.DataReader;
 import com.bschool.chats.bschoolAndroid.TestComponents.BaseTest;
+import com.bschool.chats.bschoolAndroid.TestComponents.Retry;
 
 public class ChatPageTest extends BaseTest {
-	@Test(groups= {"Smoke"})
+	@Test(groups= {"Smoke"}, retryAnalyzer=Retry.class)
 	public void eventPage_displayedTest() 
 	{			
 		    chatPage = homePage.goToChatPage();

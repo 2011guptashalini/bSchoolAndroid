@@ -13,9 +13,10 @@ import org.testng.annotations.Test;
 
 import com.bschool.chats.bschoolAndroid.Data.DataReader;
 import com.bschool.chats.bschoolAndroid.TestComponents.BaseTest;
+import com.bschool.chats.bschoolAndroid.TestComponents.Retry;
 
 public class HomePageTest extends BaseTest {
-	@Test(dataProvider="getData",groups= {"Smoke"})
+	@Test(dataProvider="getData",groups= {"Smoke"}, retryAnalyzer=Retry.class)
 	public void homePage_displayedTest(HashMap<String,String> input) throws MalformedURLException
 	{			
 		    //homePage = loginPage.loginApplication(input.get("email"), input.get("password"));

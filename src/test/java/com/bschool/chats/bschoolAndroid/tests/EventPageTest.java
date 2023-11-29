@@ -14,9 +14,10 @@ import org.testng.annotations.Test;
 
 import com.bschool.chats.bschoolAndroid.Data.DataReader;
 import com.bschool.chats.bschoolAndroid.TestComponents.BaseTest;
+import com.bschool.chats.bschoolAndroid.TestComponents.Retry;
 
 public class EventPageTest extends BaseTest {
-	@Test(groups= {"Smoke"})
+	@Test(groups= {"Smoke"}, retryAnalyzer=Retry.class)
 	public void eventPage_displayedTest() 
 	{			
 		    eventPage = homePage.goToEventPage();
@@ -29,7 +30,7 @@ public class EventPageTest extends BaseTest {
 			
 		}
 		
-	@Test(groups= {"Smoke"})
+	@Test(groups= {"Smoke"}, retryAnalyzer=Retry.class)
 	public void eventPage_addEventTest() {
 		
 		eventPage = homePage.goToEventPage();
@@ -47,7 +48,7 @@ public class EventPageTest extends BaseTest {
 		Assert.assertTrue(match, "Event is added and displayed");
 	}
 	
-	@Test(groups= {"Smoke"})
+	@Test(groups= {"Smoke"}, retryAnalyzer=Retry.class)
 	public void eventPage_editEvent()
 	{
 		eventPage = homePage.goToEventPage();
@@ -82,7 +83,7 @@ public class EventPageTest extends BaseTest {
 				
 		
 	}
-	@Test(groups= {"Smoke"})
+	@Test(groups= {"Smoke"}, retryAnalyzer=Retry.class)
 	public void eventPage_readDetails() {
 		eventPage = homePage.goToEventPage();
 		eventPage.clickAddEvent();
