@@ -8,6 +8,7 @@
     <classes>
       <class name="com.bschool.chats.bschoolAndroid.tests.HomePageTest"/>
       <class name="com.bschool.chats.bschoolAndroid.tests.EventPageTest"/>
+      <class name="com.bschool.chats.bschoolAndroid.tests.ChatPageTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

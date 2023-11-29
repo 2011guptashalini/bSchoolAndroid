@@ -2,7 +2,6 @@ package com.bschool.chats.bschoolAndroid.TestComponents;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Properties;
@@ -12,7 +11,9 @@ import io.appium.java_client.android.AndroidDriver;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
@@ -22,6 +23,7 @@ import com.bschool.chats.bschoolAndroid.pageojects.*;
 public class BaseTest {
 	
 	public static AndroidDriver driver;
+	public static AndroidDriver driver1;
 	Properties prop = new Properties();
 	
 	// Create objects of pages
@@ -31,22 +33,31 @@ public class BaseTest {
 	public EventPage eventPage;
 	public ChatPage chatPage;
 	
-	public AndroidDriver initializeDriver(String deviceName) throws MalformedURLException, URISyntaxException
+	public AndroidDriver initializeDriver(String deviceName) throws URISyntaxException, IOException
 	{
-		//When testing needs to be performed on mobile app, some capabilities will change. 
+		//When testing needs to be performed on mobile app, some capabilities will change.
+		
+		//Path to apk file
+				String apkPath = System.getProperty("user.dir")+"//app-debug.apk";	
 				DesiredCapabilities cap = new DesiredCapabilities();
 				cap.setCapability("deviceName", deviceName);
 				cap.setCapability("platformName", "Android"); 
-				cap.setCapability("appPackage","com.bschool.chats");
-				cap.setCapability("appActivity","com.bschool.chats.MainActivity");
+				cap.setCapability("app", apkPath);
+				
 				driver = new AndroidDriver(new URI("http://127.0.0.1:4723/wd/hub").toURL(), cap);
+						
+				// Specify the path of the photo you want to send
+				String photoPath = System.getProperty("user.dir")+"//testphoto.jpeg";
+				File photo = new File(photoPath);
+		        
+		        // Push the photo file to the device
+		        driver.pushFile("/sdcard/DCIM/Camera/photo.jpg", photo);
 				return driver;
 	}
 	
 	
-	
 	@BeforeMethod
-	public HomePage logintoApp() throws MalformedURLException, URISyntaxException
+	public HomePage logintoApp() throws URISyntaxException, IOException
 	{
 		String deviceName = "Pixel 7 API 30";
 		initializeDriver(deviceName);
@@ -61,7 +72,7 @@ public class BaseTest {
 		
 	}
 	
-	public LoginPage logintoSecondDevice() throws MalformedURLException, URISyntaxException
+	public LoginPage logintoSecondDevice() throws URISyntaxException, IOException
 	{
 		String deviceName = null;
 		initializeDriver(deviceName);
@@ -86,6 +97,8 @@ public class BaseTest {
 	
 	@AfterMethod
 	public void tearDown() {
+		
+		driver.removeApp("com.bschool.chats");
 		driver.quit();
 		//driver.close();
 	}

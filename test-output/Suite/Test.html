@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>4/1/2</td>
+<td>Tests passed/Failed/Skipped:</td><td>3/1/3</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Nov 29 16:28:19 IST 2023</td>
+<td>Started on:</td><td>Wed Nov 29 17:42:19 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>284 seconds (284493 ms)</td>
+<tr><td>Total time:</td><td>231 seconds (231587 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -68,7 +68,7 @@ function toggleAllBoxes() {
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
 <table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -76,15 +76,15 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.bschool.chats.bschoolAndroid.tests.EventPageTest.eventPage_editEvent()'><b>eventPage_editEvent</b><br>Test class: com.bschool.chats.bschoolAndroid.tests.EventPageTest</td>
+<td title='com.bschool.chats.bschoolAndroid.tests.EventPageTest.logintoApp()'><b>logintoApp</b><br>Test class: com.bschool.chats.bschoolAndroid.tests.EventPageTest</td>
 <td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;14.1&apos;, java.version: &apos;17.0.8.1&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [591ec674-3438-489b-8ff1-a7d41c8b7635, findElement {using=xpath, value=//android.widget.EditText[@content-desc=&quot;EventName&quot;]}]
+Command: [722765f8-68fe-4cf3-b530-70628f35a7dd, findElement {using=xpath, value=//android.widget.TextView[@content-desc=&quot;SkipVideoButton&quot;]}]
 Capabilities {appium:appActivity: com.bschool.chats.MainActivity, appium:appPackage: com.bschool.chats, appium:databaseEnabled: false, appium:desired: {appActivity: com.bschool.chats.MainActivity, appPackage: com.bschool.chats, deviceName: Pixel 7 API 30, platformName: ANDROID}, appium:deviceApiLevel: 30, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 11, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 2211, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 591ec674-3438-489b-8ff1-a7d41c8b7635
+Session ID: 722765f8-68fe-4cf3-b530-70628f35a7dd
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
@@ -97,19 +97,20 @@ Session ID: 591ec674-3438-489b-8ff1-a7d41c8b7635
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy16.isDisplayed(Unknown Source)
-	at com.bschool.chats.bschoolAndroid.pageojects.EventPage.VerifyImageIsUploaded(EventPage.java:363)
-	at com.bschool.chats.bschoolAndroid.tests.EventPageTest.eventPage_editEvent(EventPageTest.java:61)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.click(Unknown Source)
+	at com.bschool.chats.bschoolAndroid.pageojects.LaunchPage.ClickSkip(LaunchPage.java:31)
+	at com.bschool.chats.bschoolAndroid.pageojects.LaunchPage.goTo(LaunchPage.java:42)
+	at com.bschool.chats.bschoolAndroid.TestComponents.BaseTest.logintoApp(BaseTest.java:54)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1749978269", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1749978269'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+... Removed 36 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace900824070", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace900824070'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;14.1&apos;, java.version: &apos;17.0.8.1&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [591ec674-3438-489b-8ff1-a7d41c8b7635, findElement {using=xpath, value=//android.widget.EditText[@content-desc=&quot;EventName&quot;]}]
+Command: [722765f8-68fe-4cf3-b530-70628f35a7dd, findElement {using=xpath, value=//android.widget.TextView[@content-desc=&quot;SkipVideoButton&quot;]}]
 Capabilities {appium:appActivity: com.bschool.chats.MainActivity, appium:appPackage: com.bschool.chats, appium:databaseEnabled: false, appium:desired: {appActivity: com.bschool.chats.MainActivity, appPackage: com.bschool.chats, deviceName: Pixel 7 API 30, platformName: ANDROID}, appium:deviceApiLevel: 30, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 11, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 2211, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 591ec674-3438-489b-8ff1-a7d41c8b7635
+Session ID: 722765f8-68fe-4cf3-b530-70628f35a7dd
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -127,9 +128,220 @@ Session ID: 591ec674-3438-489b-8ff1-a7d41c8b7635
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy16.isDisplayed(Unknown Source)
-	at com.bschool.chats.bschoolAndroid.pageojects.EventPage.VerifyImageIsUploaded(EventPage.java:363)
-	at com.bschool.chats.bschoolAndroid.tests.EventPageTest.eventPage_editEvent(EventPageTest.java:61)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.click(Unknown Source)
+	at com.bschool.chats.bschoolAndroid.pageojects.LaunchPage.ClickSkip(LaunchPage.java:31)
+	at com.bschool.chats.bschoolAndroid.pageojects.LaunchPage.goTo(LaunchPage.java:42)
+	at com.bschool.chats.bschoolAndroid.TestComponents.BaseTest.logintoApp(BaseTest.java:54)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>15</td>
+<td>com.bschool.chats.bschoolAndroid.tests.EventPageTest@503ecb24</td></tr>
+<tr>
+<td title='com.bschool.chats.bschoolAndroid.tests.ChatPageTest.logintoApp()'><b>logintoApp</b><br>Test class: com.bschool.chats.bschoolAndroid.tests.ChatPageTest</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;14.1&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [6ad599a2-05a1-487f-bebd-94dc0d3b406d, findElement {using=xpath, value=//android.widget.TextView[@content-desc=&quot;SkipVideoButton&quot;]}]
+Capabilities {appium:appActivity: com.bschool.chats.MainActivity, appium:appPackage: com.bschool.chats, appium:databaseEnabled: false, appium:desired: {appActivity: com.bschool.chats.MainActivity, appPackage: com.bschool.chats, deviceName: Pixel 7 API 30, platformName: ANDROID}, appium:deviceApiLevel: 30, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 11, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 2211, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 6ad599a2-05a1-487f-bebd-94dc0d3b406d
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.click(Unknown Source)
+	at com.bschool.chats.bschoolAndroid.pageojects.LaunchPage.ClickSkip(LaunchPage.java:31)
+	at com.bschool.chats.bschoolAndroid.pageojects.LaunchPage.goTo(LaunchPage.java:42)
+	at com.bschool.chats.bschoolAndroid.TestComponents.BaseTest.logintoApp(BaseTest.java:54)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 36 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace70543368", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace70543368'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;14.1&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [6ad599a2-05a1-487f-bebd-94dc0d3b406d, findElement {using=xpath, value=//android.widget.TextView[@content-desc=&quot;SkipVideoButton&quot;]}]
+Capabilities {appium:appActivity: com.bschool.chats.MainActivity, appium:appPackage: com.bschool.chats, appium:databaseEnabled: false, appium:desired: {appActivity: com.bschool.chats.MainActivity, appPackage: com.bschool.chats, deviceName: Pixel 7 API 30, platformName: ANDROID}, appium:deviceApiLevel: 30, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 11, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 2211, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 6ad599a2-05a1-487f-bebd-94dc0d3b406d
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.click(Unknown Source)
+	at com.bschool.chats.bschoolAndroid.pageojects.LaunchPage.ClickSkip(LaunchPage.java:31)
+	at com.bschool.chats.bschoolAndroid.pageojects.LaunchPage.goTo(LaunchPage.java:42)
+	at com.bschool.chats.bschoolAndroid.TestComponents.BaseTest.logintoApp(BaseTest.java:54)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>16</td>
+<td>com.bschool.chats.bschoolAndroid.tests.ChatPageTest@4c51cf28</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.bschool.chats.bschoolAndroid.tests.EventPageTest.tearDown()'><b>tearDown</b><br>Test class: com.bschool.chats.bschoolAndroid.tests.EventPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.bschool.chats.bschoolAndroid.tests.EventPageTest@503ecb24</td></tr>
+<tr>
+<td title='com.bschool.chats.bschoolAndroid.tests.ChatPageTest.tearDown()'><b>tearDown</b><br>Test class: com.bschool.chats.bschoolAndroid.tests.ChatPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.bschool.chats.bschoolAndroid.tests.ChatPageTest@4c51cf28</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.bschool.chats.bschoolAndroid.tests.EventPageTest.eventPage_editEvent()'><b>eventPage_editEvent</b><br>Test class: com.bschool.chats.bschoolAndroid.tests.EventPageTest</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;14.1&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [e4b08815-92b9-44a1-b460-ebf8748c9e06, findElement {using=xpath, value=//android.widget.ImageView[@resource-id=&quot;com.google.android.documentsui:id/icon_thumb&quot;]}]
+Capabilities {appium:appActivity: com.bschool.chats.MainActivity, appium:appPackage: com.bschool.chats, appium:databaseEnabled: false, appium:desired: {appActivity: com.bschool.chats.MainActivity, appPackage: com.bschool.chats, deviceName: Pixel 7 API 30, platformName: ANDROID}, appium:deviceApiLevel: 30, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 11, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 2211, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: e4b08815-92b9-44a1-b460-ebf8748c9e06
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.click(Unknown Source)
+	at com.bschool.chats.bschoolAndroid.pageojects.EventPage.addImage(EventPage.java:241)
+	at com.bschool.chats.bschoolAndroid.tests.EventPageTest.eventPage_editEvent(EventPageTest.java:57)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace378227888", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace378227888'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;14.1&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [e4b08815-92b9-44a1-b460-ebf8748c9e06, findElement {using=xpath, value=//android.widget.ImageView[@resource-id=&quot;com.google.android.documentsui:id/icon_thumb&quot;]}]
+Capabilities {appium:appActivity: com.bschool.chats.MainActivity, appium:appPackage: com.bschool.chats, appium:databaseEnabled: false, appium:desired: {appActivity: com.bschool.chats.MainActivity, appPackage: com.bschool.chats, deviceName: Pixel 7 API 30, platformName: ANDROID}, appium:deviceApiLevel: 30, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 11, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 2211, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: e4b08815-92b9-44a1-b460-ebf8748c9e06
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.click(Unknown Source)
+	at com.bschool.chats.bschoolAndroid.pageojects.EventPage.addImage(EventPage.java:241)
+	at com.bschool.chats.bschoolAndroid.tests.EventPageTest.eventPage_editEvent(EventPageTest.java:57)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -159,8 +371,8 @@ Session ID: 591ec674-3438-489b-8ff1-a7d41c8b7635
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>41</td>
-<td>com.bschool.chats.bschoolAndroid.tests.EventPageTest@403f0a22</td></tr>
+<td>37</td>
+<td>com.bschool.chats.bschoolAndroid.tests.EventPageTest@503ecb24</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -173,23 +385,18 @@ Session ID: 591ec674-3438-489b-8ff1-a7d41c8b7635
 <tr>
 <td title='com.bschool.chats.bschoolAndroid.tests.EventPageTest.eventPage_addEventTest()'><b>eventPage_addEventTest</b><br>Test class: com.bschool.chats.bschoolAndroid.tests.EventPageTest</td>
 <td></td>
-<td>30</td>
-<td>com.bschool.chats.bschoolAndroid.tests.EventPageTest@403f0a22</td></tr>
-<tr>
-<td title='com.bschool.chats.bschoolAndroid.tests.EventPageTest.eventPage_readDetails()'><b>eventPage_readDetails</b><br>Test class: com.bschool.chats.bschoolAndroid.tests.EventPageTest</td>
-<td></td>
-<td>32</td>
-<td>com.bschool.chats.bschoolAndroid.tests.EventPageTest@403f0a22</td></tr>
-<tr>
-<td title='com.bschool.chats.bschoolAndroid.tests.EventPageTest.eventPage_displayedTest()'><b>eventPage_displayedTest</b><br>Test class: com.bschool.chats.bschoolAndroid.tests.EventPageTest</td>
-<td></td>
-<td>6</td>
-<td>com.bschool.chats.bschoolAndroid.tests.EventPageTest@403f0a22</td></tr>
+<td>34</td>
+<td>com.bschool.chats.bschoolAndroid.tests.EventPageTest@503ecb24</td></tr>
 <tr>
 <td title='com.bschool.chats.bschoolAndroid.tests.HomePageTest.homePage_displayedTest()'><b>homePage_displayedTest</b><br>Test class: com.bschool.chats.bschoolAndroid.tests.HomePageTest<br>Parameters: {password=kingofstl1, email=ntr8igay4h@mailers.edu.pl}</td>
 <td></td>
-<td>3</td>
-<td>com.bschool.chats.bschoolAndroid.tests.HomePageTest@4f9a2c08</td></tr>
+<td>4</td>
+<td>com.bschool.chats.bschoolAndroid.tests.HomePageTest@a87f8ec</td></tr>
+<tr>
+<td title='com.bschool.chats.bschoolAndroid.tests.EventPageTest.eventPage_displayedTest()'><b>eventPage_displayedTest</b><br>Test class: com.bschool.chats.bschoolAndroid.tests.EventPageTest</td>
+<td></td>
+<td>7</td>
+<td>com.bschool.chats.bschoolAndroid.tests.EventPageTest@503ecb24</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -200,15 +407,107 @@ Session ID: 591ec674-3438-489b-8ff1-a7d41c8b7635
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<td title='com.bschool.chats.bschoolAndroid.tests.EventPageTest.eventPage_readDetails()'><b>eventPage_readDetails</b><br>Test class: com.bschool.chats.bschoolAndroid.tests.EventPageTest</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;14.1&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [722765f8-68fe-4cf3-b530-70628f35a7dd, findElement {using=xpath, value=//android.widget.TextView[@content-desc=&quot;SkipVideoButton&quot;]}]
+Capabilities {appium:appActivity: com.bschool.chats.MainActivity, appium:appPackage: com.bschool.chats, appium:databaseEnabled: false, appium:desired: {appActivity: com.bschool.chats.MainActivity, appPackage: com.bschool.chats, deviceName: Pixel 7 API 30, platformName: ANDROID}, appium:deviceApiLevel: 30, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 11, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 2211, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 722765f8-68fe-4cf3-b530-70628f35a7dd
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.click(Unknown Source)
+	at com.bschool.chats.bschoolAndroid.pageojects.LaunchPage.ClickSkip(LaunchPage.java:31)
+	at com.bschool.chats.bschoolAndroid.pageojects.LaunchPage.goTo(LaunchPage.java:42)
+	at com.bschool.chats.bschoolAndroid.TestComponents.BaseTest.logintoApp(BaseTest.java:54)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 36 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace23218037", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace23218037'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;14.1&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [722765f8-68fe-4cf3-b530-70628f35a7dd, findElement {using=xpath, value=//android.widget.TextView[@content-desc=&quot;SkipVideoButton&quot;]}]
+Capabilities {appium:appActivity: com.bschool.chats.MainActivity, appium:appPackage: com.bschool.chats, appium:databaseEnabled: false, appium:desired: {appActivity: com.bschool.chats.MainActivity, appPackage: com.bschool.chats, deviceName: Pixel 7 API 30, platformName: ANDROID}, appium:deviceApiLevel: 30, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 11, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 2211, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 722765f8-68fe-4cf3-b530-70628f35a7dd
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.click(Unknown Source)
+	at com.bschool.chats.bschoolAndroid.pageojects.LaunchPage.ClickSkip(LaunchPage.java:31)
+	at com.bschool.chats.bschoolAndroid.pageojects.LaunchPage.goTo(LaunchPage.java:42)
+	at com.bschool.chats.bschoolAndroid.TestComponents.BaseTest.logintoApp(BaseTest.java:54)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.bschool.chats.bschoolAndroid.tests.EventPageTest@503ecb24</td></tr>
+<tr>
 <td title='com.bschool.chats.bschoolAndroid.tests.EventPageTest.eventPage_editEvent()'><b>eventPage_editEvent</b><br>Test class: com.bschool.chats.bschoolAndroid.tests.EventPageTest</td>
 <td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;14.1&apos;, java.version: &apos;17.0.8.1&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [adeeb76f-d69f-4a18-9674-39a097be822e, findElement {using=xpath, value=//android.widget.EditText[@content-desc=&quot;EventName&quot;]}]
+Command: [17e300cf-293e-4ffe-8a93-797822eb1eb4, findElement {using=xpath, value=//android.widget.ImageView[@resource-id=&quot;com.google.android.documentsui:id/icon_thumb&quot;]}]
 Capabilities {appium:appActivity: com.bschool.chats.MainActivity, appium:appPackage: com.bschool.chats, appium:databaseEnabled: false, appium:desired: {appActivity: com.bschool.chats.MainActivity, appPackage: com.bschool.chats, deviceName: Pixel 7 API 30, platformName: ANDROID}, appium:deviceApiLevel: 30, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 11, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 2211, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: adeeb76f-d69f-4a18-9674-39a097be822e
+Session ID: 17e300cf-293e-4ffe-8a93-797822eb1eb4
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
@@ -222,18 +521,18 @@ Session ID: adeeb76f-d69f-4a18-9674-39a097be822e
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 	at jdk.proxy2/jdk.proxy2.$Proxy16.isDisplayed(Unknown Source)
-	at com.bschool.chats.bschoolAndroid.pageojects.EventPage.VerifyImageIsUploaded(EventPage.java:363)
-	at com.bschool.chats.bschoolAndroid.tests.EventPageTest.eventPage_editEvent(EventPageTest.java:61)
+	at com.bschool.chats.bschoolAndroid.pageojects.EventPage.VerifyPhotoOptionsDisplayed(EventPage.java:356)
+	at com.bschool.chats.bschoolAndroid.tests.EventPageTest.eventPage_editEvent(EventPageTest.java:58)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1149993098", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1149993098'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1489099273", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1489099273'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;14.1&apos;, java.version: &apos;17.0.8.1&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [adeeb76f-d69f-4a18-9674-39a097be822e, findElement {using=xpath, value=//android.widget.EditText[@content-desc=&quot;EventName&quot;]}]
+Command: [17e300cf-293e-4ffe-8a93-797822eb1eb4, findElement {using=xpath, value=//android.widget.ImageView[@resource-id=&quot;com.google.android.documentsui:id/icon_thumb&quot;]}]
 Capabilities {appium:appActivity: com.bschool.chats.MainActivity, appium:appPackage: com.bschool.chats, appium:databaseEnabled: false, appium:desired: {appActivity: com.bschool.chats.MainActivity, appPackage: com.bschool.chats, deviceName: Pixel 7 API 30, platformName: ANDROID}, appium:deviceApiLevel: 30, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 11, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 2211, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: adeeb76f-d69f-4a18-9674-39a097be822e
+Session ID: 17e300cf-293e-4ffe-8a93-797822eb1eb4
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -252,8 +551,8 @@ Session ID: adeeb76f-d69f-4a18-9674-39a097be822e
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 	at jdk.proxy2/jdk.proxy2.$Proxy16.isDisplayed(Unknown Source)
-	at com.bschool.chats.bschoolAndroid.pageojects.EventPage.VerifyImageIsUploaded(EventPage.java:363)
-	at com.bschool.chats.bschoolAndroid.tests.EventPageTest.eventPage_editEvent(EventPageTest.java:61)
+	at com.bschool.chats.bschoolAndroid.pageojects.EventPage.VerifyPhotoOptionsDisplayed(EventPage.java:356)
+	at com.bschool.chats.bschoolAndroid.tests.EventPageTest.eventPage_editEvent(EventPageTest.java:58)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -283,18 +582,18 @@ Session ID: adeeb76f-d69f-4a18-9674-39a097be822e
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>39</td>
-<td>com.bschool.chats.bschoolAndroid.tests.EventPageTest@403f0a22</td></tr>
+<td>47</td>
+<td>com.bschool.chats.bschoolAndroid.tests.EventPageTest@503ecb24</td></tr>
 <tr>
-<td title='com.bschool.chats.bschoolAndroid.tests.EventPageTest.eventPage_addEventTest()'><b>eventPage_addEventTest</b><br>Test class: com.bschool.chats.bschoolAndroid.tests.EventPageTest</td>
+<td title='com.bschool.chats.bschoolAndroid.tests.ChatPageTest.eventPage_displayedTest()'><b>eventPage_displayedTest</b><br>Test class: com.bschool.chats.bschoolAndroid.tests.ChatPageTest</td>
 <td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;14.1&apos;, java.version: &apos;17.0.8.1&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [ab8d673b-a455-4027-925b-90c12c492913, findElement {using=xpath, value=//android.widget.EditText[@content-desc=&quot;EventName&quot;]}]
+Command: [6ad599a2-05a1-487f-bebd-94dc0d3b406d, findElement {using=xpath, value=//android.widget.TextView[@content-desc=&quot;SkipVideoButton&quot;]}]
 Capabilities {appium:appActivity: com.bschool.chats.MainActivity, appium:appPackage: com.bschool.chats, appium:databaseEnabled: false, appium:desired: {appActivity: com.bschool.chats.MainActivity, appPackage: com.bschool.chats, deviceName: Pixel 7 API 30, platformName: ANDROID}, appium:deviceApiLevel: 30, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 11, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 2211, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: ab8d673b-a455-4027-925b-90c12c492913
+Session ID: 6ad599a2-05a1-487f-bebd-94dc0d3b406d
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
@@ -307,19 +606,20 @@ Session ID: ab8d673b-a455-4027-925b-90c12c492913
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy16.isDisplayed(Unknown Source)
-	at com.bschool.chats.bschoolAndroid.pageojects.EventPage.VerifyImageIsUploaded(EventPage.java:363)
-	at com.bschool.chats.bschoolAndroid.tests.EventPageTest.eventPage_addEventTest(EventPageTest.java:42)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.click(Unknown Source)
+	at com.bschool.chats.bschoolAndroid.pageojects.LaunchPage.ClickSkip(LaunchPage.java:31)
+	at com.bschool.chats.bschoolAndroid.pageojects.LaunchPage.goTo(LaunchPage.java:42)
+	at com.bschool.chats.bschoolAndroid.TestComponents.BaseTest.logintoApp(BaseTest.java:54)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace20084184", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace20084184'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+... Removed 36 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace406511188", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace406511188'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;14.1&apos;, java.version: &apos;17.0.8.1&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [ab8d673b-a455-4027-925b-90c12c492913, findElement {using=xpath, value=//android.widget.EditText[@content-desc=&quot;EventName&quot;]}]
+Command: [6ad599a2-05a1-487f-bebd-94dc0d3b406d, findElement {using=xpath, value=//android.widget.TextView[@content-desc=&quot;SkipVideoButton&quot;]}]
 Capabilities {appium:appActivity: com.bschool.chats.MainActivity, appium:appPackage: com.bschool.chats, appium:databaseEnabled: false, appium:desired: {appActivity: com.bschool.chats.MainActivity, appPackage: com.bschool.chats, deviceName: Pixel 7 API 30, platformName: ANDROID}, appium:deviceApiLevel: 30, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 11, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 2211, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: ab8d673b-a455-4027-925b-90c12c492913
+Session ID: 6ad599a2-05a1-487f-bebd-94dc0d3b406d
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -337,15 +637,20 @@ Session ID: ab8d673b-a455-4027-925b-90c12c492913
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy16.isDisplayed(Unknown Source)
-	at com.bschool.chats.bschoolAndroid.pageojects.EventPage.VerifyImageIsUploaded(EventPage.java:363)
-	at com.bschool.chats.bschoolAndroid.tests.EventPageTest.eventPage_addEventTest(EventPageTest.java:42)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.click(Unknown Source)
+	at com.bschool.chats.bschoolAndroid.pageojects.LaunchPage.ClickSkip(LaunchPage.java:31)
+	at com.bschool.chats.bschoolAndroid.pageojects.LaunchPage.goTo(LaunchPage.java:42)
+	at com.bschool.chats.bschoolAndroid.TestComponents.BaseTest.logintoApp(BaseTest.java:54)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
 	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
 	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
@@ -369,8 +674,8 @@ Session ID: ab8d673b-a455-4027-925b-90c12c492913
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>40</td>
-<td>com.bschool.chats.bschoolAndroid.tests.EventPageTest@403f0a22</td></tr>
+<td>0</td>
+<td>com.bschool.chats.bschoolAndroid.tests.ChatPageTest@4c51cf28</td></tr>
 </table><p>
 </body>
 </html>
