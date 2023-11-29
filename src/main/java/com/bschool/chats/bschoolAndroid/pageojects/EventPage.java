@@ -310,7 +310,7 @@ public class EventPage extends AbstractComponents {
 	
 	//Edit event test methods
 	
-	public void ClickEditEvent() {
+	public void openAddedEvent() {
 		waitForAWhile(10);
 		WebElement addedEvent = dynamicXpathGeneratorEvent(EventName);
 		addedEvent.click();
