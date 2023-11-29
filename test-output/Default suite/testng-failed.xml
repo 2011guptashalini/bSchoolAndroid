@@ -7,7 +7,7 @@
         <methods>
           <include name="logintoApp"/>
           <include name="tearDown"/>
-          <include name="eventPage_editEvent"/>
+          <include name="eventPage_readDetails"/>
         </methods>
       </class> <!-- com.bschool.chats.bschoolAndroid.tests.EventPageTest -->
     </classes>

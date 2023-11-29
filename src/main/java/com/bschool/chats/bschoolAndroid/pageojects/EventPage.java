@@ -38,6 +38,8 @@ public class EventPage extends AbstractComponents {
     int randomLinks = l.nextInt(myLinks.size());
     String Link = myLinks.get(randomLinks);
     
+    String shortDescription = "Meeting to connect with MBA students";
+    
 	
 	public EventPage(AndroidDriver driver) {
 		super(driver);
@@ -186,23 +188,40 @@ public class EventPage extends AbstractComponents {
 	WebElement editEventAddedLinkOnSaveElement;
 	
 	
-	public WebElement dynamicXpathGeneratorEvent(String str) {
+	
+	//Read Information
+	@FindBy(xpath="//android.widget.TextView[@text=\"This is a short description\"]")
+	WebElement readInfoShortDescription;
+	
+	//Discussion and Comment
+	@FindBy(xpath="//android.widget.TextView[@text=\"Discussion\"]")
+	WebElement discussionTab;
+	
+	
+	
+	
+	public WebElement dynamicXpathGenerator(String str) {
 		String xpathStr = "\"" + str + "\"";
 		WebElement dynamicXpathEvent = driver.findElement(By.xpath("//android.widget.TextView[@text="+xpathStr+"]"));
 		return dynamicXpathEvent;
 	}
-	
-	//public WebElement dynamicXpathGeneratorLinkTextBox(String str) {
-	//	String xpathStr = "\"" + str + "\"";
-	//	WebElement dynamicXpath = driver.findElement(By.xpath("//android.widget.EditText[@text="+xpathStr+"]"));
-	//	return dynamicXpath;
-	//}
+	/*public WebElement dynamicXpathGeneratorEvent(String str) {
+	String xpathStr = "\"" + str + "\"";
+	WebElement dynamicXpathEvent = driver.findElement(By.xpath("//android.widget.TextView[@text="+xpathStr+"]"));
+	return dynamicXpathEvent;
+}
 	
 	public WebElement dynamicXpathGeneratorAddedLinkOnSave(String str) {
 		String xpathStr = "\"" + str + "\"";
 		WebElement dynamicXpath = driver.findElement(By.xpath("//android.widget.TextView[@text="+xpathStr+"]"));
 		return dynamicXpath;
 	}
+	
+	public WebElement dynamicXpathGeneratorShortDescription(String str) {
+		String xpathStr = "\"" + str + "\"";
+		WebElement dynamicXpath = driver.findElement(By.xpath("//android.widget.TextView[@text="+xpathStr+"]"));
+		return dynamicXpath;
+	}*/
 	
 	
 	
@@ -245,7 +264,8 @@ public class EventPage extends AbstractComponents {
 		
 		addEventSelectDateDoneElement.click();
 		waitForAWhile(10);
-		addEventShortDescriptionElement.sendKeys("This is a short description");	
+		
+		addEventShortDescriptionElement.sendKeys(shortDescription);	
 		waitForAWhile(10);
 		scroll(ScrollDirection.DOWN, 0.5);
 		
@@ -265,6 +285,67 @@ public class EventPage extends AbstractComponents {
 		scroll(ScrollDirection.DOWN, 1.0);
 		
 	}
+	
+	
+	
+	//Edit event test methods
+	
+	public void openAddedEvent() {
+		waitForAWhile(10);
+		WebElement addedEvent = dynamicXpathGenerator(EventName);
+		addedEvent.click();
+	}
+	
+	public void ClickEditButton() {
+		waitForAWhile(10);
+		editEventEditButtonElement.click();
+					
+		
+	}
+	
+	//Update category
+	public void UpdateCategory()
+	{
+		waitForAWhile(10);
+		editEventEditCategory.click();
+		waitForAWhile(10);
+		editEventSelectEducation.click();	
+	}
+	
+	//Update link to the event	
+	public void UpdatingLink() {
+		
+		waitForAWhile(20);
+		editEventAddLinkElement.click();
+		waitForAWhile(10);
+		editEventLinkTextboxElement.sendKeys(Link);
+		waitForAWhile(10);
+		editEventAddLinkSaveElement.click();
+		waitForAWhile(10);
+		scroll(ScrollDirection.DOWN, 0.5);
+		editEventUpdateEvent.click();
+			
+	}
+	
+	// Read description
+	
+    public String EventDescriptionIs() {
+		
+		WebElement shortDescriptionElement = dynamicXpathGenerator(shortDescription);
+		String shrotDescriptionGot = shortDescriptionElement.getText();
+		return shrotDescriptionGot;
+		
+	}
+    public Boolean EventDescriptionIsDisplayed() {
+		
+		WebElement shortDescriptionElement = dynamicXpathGenerator(shortDescription);
+		Boolean match = shortDescriptionElement.isDisplayed();
+		return match;
+		
+	}
+	
+	
+	//Assertions
 	
 	public Boolean VerifyPhotoOptionsDisplayed() {
 
@@ -301,51 +382,12 @@ public class EventPage extends AbstractComponents {
 	
 	public Boolean VerifyEventIsAdded() {
 		
-		WebElement addedEvent = dynamicXpathGeneratorEvent(EventName);
+		WebElement addedEvent = dynamicXpathGenerator(EventName);
 		Boolean match = addedEvent.isDisplayed();
 		return match;
 		
 	}
 	
-	
-	//Edit event test methods
-	
-	public void openAddedEvent() {
-		waitForAWhile(10);
-		WebElement addedEvent = dynamicXpathGeneratorEvent(EventName);
-		addedEvent.click();
-	}
-	
-	public void ClickEditButton() {
-		waitForAWhile(10);
-		editEventEditButtonElement.click();
-					
-		
-	}
-	
-	//Update category
-	public void UpdateCategory()
-	{
-		waitForAWhile(10);
-		editEventEditCategory.click();
-		waitForAWhile(10);
-		editEventSelectEducation.click();	
-	}
-	
-	//Update link to the event	
-	public void UpdatingLink() {
-		
-		waitForAWhile(20);
-		editEventAddLinkElement.click();
-		waitForAWhile(10);
-		editEventLinkTextboxElement.sendKeys(Link);
-		waitForAWhile(10);
-		editEventAddLinkSaveElement.click();
-		waitForAWhile(10);
-		scroll(ScrollDirection.DOWN, 0.5);
-		editEventUpdateEvent.click();
-			
-	}
 	
 	//It will click on add link and assert that add link popup is displayed
 	public Boolean AddLinkPopupIsDisplayed() {
@@ -370,7 +412,7 @@ public class EventPage extends AbstractComponents {
 	public Boolean AddedLinkAfterUpdatingIsDisplayed() {
 		
 		waitForAWhile(10);
-		WebElement linkAfterSave = dynamicXpathGeneratorAddedLinkOnSave(Link);
+		WebElement linkAfterSave = dynamicXpathGenerator(Link);
 		Boolean match = linkAfterSave.isDisplayed();
 		return match;
 		

@@ -100,6 +100,12 @@ public class EventPageTest extends BaseTest {
 		//Open added event
 		eventPage.openAddedEvent();
 		
+		
+		
+		String shortDescriptionDisplayed = eventPage.EventDescriptionIs();
+		match = eventPage.EventDescriptionIsDisplayed();
+		Assert.assertTrue(match, "Event description is displayed and description is"+shortDescriptionDisplayed);
+		
 	}
 	
 		
