@@ -1,6 +1,7 @@
 package com.bschool.chats.bschoolAndroid.TestComponents;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -38,6 +39,7 @@ public class BaseTest {
 		//When testing needs to be performed on mobile app, some capabilities will change.
 		
 		//Path to apk file
+		        
 				String apkPath = System.getProperty("user.dir")+"/app-debug.apk";	
 				DesiredCapabilities cap = new DesiredCapabilities();
 				cap.setCapability("deviceName", deviceName);
@@ -57,15 +59,16 @@ public class BaseTest {
 	}
 	
 	
-	@BeforeMethod
+	@BeforeMethod(alwaysRun=true)
 	public HomePage logintoApp() throws URISyntaxException, IOException
 	{
-		String deviceName = "Pixel 7 Pro API 30";
-		initializeDriver(deviceName);
+		//String deviceName = "Pixel 7 Pro API 30";
+		String dName = getProp("device_name");
+		initializeDriver(dName);
 		launchPage = new LaunchPage(driver);
 		launchPage.goTo();
 		loginPage = new LoginPage(driver);
-		loginPage.loginApplication("ntr8igay4h@mailers.edu.pl", "kingofstl1");
+		loginPage.loginApplication(getProp("schoolemail"), getProp("password"));
 		homePage = new HomePage(driver);
 		//loginPage.loginApplication("test", "test");
 		return homePage;
@@ -73,15 +76,19 @@ public class BaseTest {
 		
 	}
 	
-	public LoginPage logintoSecondDevice() throws URISyntaxException, IOException
+	public HomePage logintoSecondDevice() throws URISyntaxException, IOException
 	{
-		String deviceName = null;
-		initializeDriver(deviceName);
+		//String deviceName = null;
+		String dName = getProp("second_device_name");
+		initializeDriver(dName);
 		
 		launchPage = new LaunchPage(driver);
 		launchPage.goTo();
-		loginPage = new LoginPage(driver);		
-		return loginPage;
+		loginPage = new LoginPage(driver);	
+		
+		loginPage.loginApplication(getProp("second_school_email"), getProp("password"));
+		homePage = new HomePage(driver);
+		return homePage;
 		
 	}
 	public String getScreenshot(String testCaseName,AndroidDriver driver) throws IOException
@@ -95,8 +102,18 @@ public class BaseTest {
 		
 	}
 	
+	public String getProp(String key) throws IOException
+	{
+		Properties prop = new Properties();
+		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")
+				+ "//src//main//java/com//bschool//chats//bschoolAndroid//resources//GlobalData.properties");
+		prop.load(fis);
+		String keyValue = prop.getProperty(key);
+		return keyValue;
+	}
 	
-	@AfterMethod
+	
+	@AfterMethod(alwaysRun=true)
 	public void tearDown() {
 		
 		driver.removeApp("com.bschool.chats");

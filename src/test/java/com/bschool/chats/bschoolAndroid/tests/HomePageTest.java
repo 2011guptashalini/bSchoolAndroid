@@ -16,7 +16,7 @@ import com.bschool.chats.bschoolAndroid.TestComponents.BaseTest;
 import com.bschool.chats.bschoolAndroid.TestComponents.Retry;
 
 public class HomePageTest extends BaseTest {
-	@Test(dataProvider="getData",groups= {"Smoke"}, retryAnalyzer=Retry.class)
+	@Test(dataProvider="getData",groups= {"Smoke", "Regression"}, retryAnalyzer=Retry.class)
 	public void homePage_displayedTest(HashMap<String,String> input) throws MalformedURLException
 	{			
 		    //homePage = loginPage.loginApplication(input.get("email"), input.get("password"));

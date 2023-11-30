@@ -17,7 +17,7 @@ import com.bschool.chats.bschoolAndroid.TestComponents.BaseTest;
 import com.bschool.chats.bschoolAndroid.TestComponents.Retry;
 
 public class EventPageTest extends BaseTest {
-	@Test(groups= {"Smoke"}, retryAnalyzer=Retry.class)
+	@Test(groups= {"Smoke", "Regression"}, retryAnalyzer=Retry.class)
 	public void eventPage_displayedTest() 
 	{			
 		    eventPage = homePage.goToEventPage();
@@ -30,7 +30,7 @@ public class EventPageTest extends BaseTest {
 			
 		}
 		
-	@Test(groups= {"Smoke"}, retryAnalyzer=Retry.class)
+	@Test(groups= {"Smoke", "Regression"}, retryAnalyzer=Retry.class)
 	public void eventPage_addEventTest() throws InterruptedException {
 		
 		eventPage = homePage.goToEventPage();
@@ -48,7 +48,7 @@ public class EventPageTest extends BaseTest {
 		Assert.assertTrue(match, "Event is added and displayed");
 	}
 	
-	@Test(groups= {"Smoke"}, retryAnalyzer=Retry.class)
+	@Test(groups= {"Regression"}, retryAnalyzer=Retry.class)
 	public void eventPage_editEvent() throws InterruptedException
 	{
 		eventPage = homePage.goToEventPage();
@@ -83,7 +83,7 @@ public class EventPageTest extends BaseTest {
 				
 		
 	}
-	@Test(groups= {"Smoke"}, retryAnalyzer=Retry.class)
+	@Test(groups= {"Regression"}, retryAnalyzer=Retry.class)
 	public void eventPage_readDetails() throws InterruptedException {
 		eventPage = homePage.goToEventPage();
 		eventPage.clickAddEvent();

@@ -81,6 +81,14 @@ public class ChatPage extends AbstractComponents {
 	@FindBy(xpath="//android.widget.EditText[@resource-id=\"auto-complete-text-input\"]")
 	WebElement sendMessageTextBox;
 	
+	//Select a group
+	@FindBy(xpath="//android.view.ViewGroup[@resource-id=\"channel-list-messenger\"]/android.view.ViewGroup[3]/android.view.ViewGroup/android.view.ViewGroup")
+	WebElement selectAGroupWithChat;
+	
+	//Other user message
+	@FindBy(xpath="(//android.view.ViewGroup[@resource-id=\"message-simple-wrapper\"])[1]")
+	WebElement otherUserMessage;
+	
 
 	
 	//Methods
