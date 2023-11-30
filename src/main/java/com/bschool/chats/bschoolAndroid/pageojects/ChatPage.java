@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.bschool.chats.bschoolAndroid.AbstractComponents.AbstractComponents;
+import com.bschool.chats.bschoolAndroid.AbstractComponents.AbstractComponents.ScrollDirection;
 
 import io.appium.java_client.android.AndroidDriver;
 
@@ -29,6 +30,10 @@ public class ChatPage extends AbstractComponents {
 	@FindBy(xpath="//android.widget.TextView[@text=\"ALL CHATS\"]")
 	WebElement allChatsTab;
 	
+	//Create group chat
+	@FindBy(xpath="//android.widget.TextView[@text=\"Create Chat\"]")
+	WebElement createChat;
+	
 	//All chats tab
 	@FindBy(xpath="//android.widget.TextView[@text=\"BOISE STATE UNIVERSITY CHATS\"]")
 	WebElement boiseStateUniversityChatasTab;
@@ -41,7 +46,6 @@ public class ChatPage extends AbstractComponents {
 	@FindBy(xpath="//android.widget.TextView[@text=\"+\"]")
 	WebElement coverImages;
 	
-	//Select an smiley, no xpath as of now
 	
 	//Group name , no xpath as of now
 	
@@ -49,8 +53,12 @@ public class ChatPage extends AbstractComponents {
 	@FindBy(xpath="//android.widget.TextView[@text=\"X\"]")
 	WebElement closeButtonForSmileys;
 	
+	//Group name
+	@FindBy(xpath="//android.widget.TextView[@text=\"Group Name\"]")
+	WebElement groupName;
+	
 	//Group type public
-	@FindBy(xpath="//android.view.ViewGroup[@content-desc=\"CreateChatTypePublicButton\"]")
+	@FindBy(xpath="//android.widget.TextView[@text=\"Public\"]")
 	WebElement groupTypePublic;
 	
 	//Group type public
@@ -62,7 +70,7 @@ public class ChatPage extends AbstractComponents {
 	WebElement createGroup;
 	
 	//Member 1
-	@FindBy(xpath="//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup")
+	@FindBy(xpath="//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup")
 	WebElement member1;
 	
 	//Member 2
@@ -89,7 +97,104 @@ public class ChatPage extends AbstractComponents {
 	@FindBy(xpath="(//android.view.ViewGroup[@resource-id=\"message-simple-wrapper\"])[1]")
 	WebElement otherUserMessage;
 	
+	//Select an smiley, no xpath as of now
+	@FindBy(xpath="/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.widget.HorizontalScrollView/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView[2]")
+	WebElement smileyXpath;
+	
+	//Select smiley picker
+	@FindBy(xpath="/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[5]")
+	WebElement smileyPickerXpath;
+	
+	//Search member
+	@FindBy(xpath="//android.widget.EditText[@text=\"Search People\"]")
+	WebElement searchMember;
+	
 
+	public void ClickCreateChatButton() {
+		createChat.click();
+		
+	}
+	
+	public void UploadCoverImage() {
+		coverImages.click();
+		
+	}
+	
+
+	public void SmileyPicker() {
+		smileyXpath.click();
+		waitForAWhile(10);
+		smileyPickerXpath.click();
+		
+	}
+	
+	public void SmileyClose() {
+		closeButtonForSmileys.click();
+		
+	}
+	
+	public void EnterGroupName() {
+		groupName.sendKeys("Test group");
+		
+	}
+	
+	public void SelectPublicPrivacy() {
+		groupTypePublic.click();
+		
+	}
+	
+	public void ClickAddMember() {
+		addMember.click();
+		
+	}
+	
+	public void TypeInSearch() {
+		searchMember.sendKeys("Miles Tucker");
+		
+	}
+	
+	public void AddMemberToGroup() {
+		member1.click();
+		
+	}
+	public void InviteMember() {
+		inviteMember.click();
+	}
+	
+	public void ClickCreateGroup() {
+		createGroup.click();
+		
+	}
+	
+	public void createAGroupChat() {
+		ClickCreateChatButton();
+		waitForAWhile(10);
+		UploadCoverImage();
+		waitForAWhile(10);
+		SmileyPicker();
+		waitForAWhile(10);
+		//SmileyClose();
+		//waitForAWhile(10);
+		//EnterGroupName();
+		//waitForAWhile(10);
+		SelectPublicPrivacy();
+		scroll(ScrollDirection.DOWN, 0.7);
+		waitForAWhile(10);
+		ClickAddMember();
+		waitForAWhile(10);
+		TypeInSearch();
+		waitForAWhile(10);
+		AddMemberToGroup();
+		waitForAWhile(10);
+		InviteMember();
+		waitForAWhile(10);
+		ClickCreateGroup();
+		waitForAWhile(10);
+		clickChat();		
+		
+	}
+	
+	
 	
 	//Methods
 	public Boolean VerifyChatHeadingIsDisplayed() {

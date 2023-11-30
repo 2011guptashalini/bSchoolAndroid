@@ -35,7 +35,7 @@ public class ChatPageTest extends BaseTest {
 		}
 	
 	@Test(groups= {"Smoke", "Regression"}, retryAnalyzer=Retry.class)
-	public void chatPage_backToChatfromGroups() 
+	public void chatPage_addAGroup() 
 	{			
 		    chatPage = homePage.goToChatPage();
 		    Boolean match = chatPage.VerifyChatHeadingIsDisplayed();
@@ -48,6 +48,7 @@ public class ChatPageTest extends BaseTest {
 			Assert.assertTrue(match, "Boise and state university tab is displayed");
 			match = chatPage.VerifyRecentChatsIsDisplayed();
 			Assert.assertTrue(match, "Recent chats are displayed");
+			chatPage.createAGroupChat();
 			
 			
 		}
