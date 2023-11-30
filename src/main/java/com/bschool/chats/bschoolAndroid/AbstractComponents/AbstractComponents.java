@@ -1,14 +1,19 @@
 package com.bschool.chats.bschoolAndroid.AbstractComponents;
 
 import java.time.Duration;
+import java.util.Arrays;
+import java.util.Map;
 
 import org.openqa.selenium.By;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Pause;
 import org.openqa.selenium.interactions.PointerInput;
 import org.openqa.selenium.interactions.Sequence;
+import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.*;
 
+import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 
@@ -88,6 +93,22 @@ public class AbstractComponents {
         swipe.addAction(input.createPointerMove(duration, PointerInput.Origin.viewport(), end.x, end.y));
         swipe.addAction(input.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
         ((AppiumDriver) driver).perform(ImmutableList.of(swipe));
+		
+	}
+	
+	
+	public void swipeUpDate() throws InterruptedException
+	{
+		RemoteWebElement scrollView = (RemoteWebElement)driver.findElement(AppiumBy.accessibilityId("Select Day"));
+
+		driver.executeScript("gesture: swipe", Map.of("elementId", scrollView.getId(),
+		               "percentage", 50,
+		                "direction", "up"));
+		
+		RemoteWebElement tap = (RemoteWebElement)driver.findElement(By.xpath("//android.widget.TextView[@text=\"Done\"]"));
+			
+		driver.executeScript("gesture: longPress", Map.of("elementId", tap.getId(), "pressure", 0.5, "duration", 400));
+		
 		
 	}
 	

@@ -31,7 +31,7 @@ public class EventPageTest extends BaseTest {
 		}
 		
 	@Test(groups= {"Smoke"}, retryAnalyzer=Retry.class)
-	public void eventPage_addEventTest() {
+	public void eventPage_addEventTest() throws InterruptedException {
 		
 		eventPage = homePage.goToEventPage();
 		eventPage.clickAddEvent();
@@ -49,7 +49,7 @@ public class EventPageTest extends BaseTest {
 	}
 	
 	@Test(groups= {"Smoke"}, retryAnalyzer=Retry.class)
-	public void eventPage_editEvent()
+	public void eventPage_editEvent() throws InterruptedException
 	{
 		eventPage = homePage.goToEventPage();
 		eventPage.clickAddEvent();
@@ -84,7 +84,7 @@ public class EventPageTest extends BaseTest {
 		
 	}
 	@Test(groups= {"Smoke"}, retryAnalyzer=Retry.class)
-	public void eventPage_readDetails() {
+	public void eventPage_readDetails() throws InterruptedException {
 		eventPage = homePage.goToEventPage();
 		eventPage.clickAddEvent();
 		

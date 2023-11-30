@@ -38,13 +38,14 @@ public class BaseTest {
 		//When testing needs to be performed on mobile app, some capabilities will change.
 		
 		//Path to apk file
-				String apkPath = System.getProperty("user.dir")+"//app-debug.apk";	
+				String apkPath = System.getProperty("user.dir")+"/app-debug.apk";	
 				DesiredCapabilities cap = new DesiredCapabilities();
 				cap.setCapability("deviceName", deviceName);
 				cap.setCapability("platformName", "Android"); 
+				cap.setCapability("appium:automationName", "UiAutomator2"); 
 				cap.setCapability("app", apkPath);
 				
-				driver = new AndroidDriver(new URI("http://127.0.0.1:4723/wd/hub").toURL(), cap);
+				driver = new AndroidDriver(new URI("http://127.0.0.1:4723/").toURL(), cap);
 						
 				// Specify the path of the photo you want to send
 				String photoPath = System.getProperty("user.dir")+"//testphoto.jpeg";
@@ -59,7 +60,7 @@ public class BaseTest {
 	@BeforeMethod
 	public HomePage logintoApp() throws URISyntaxException, IOException
 	{
-		String deviceName = "Pixel 7 API 30";
+		String deviceName = "Pixel 7 Pro API 30";
 		initializeDriver(deviceName);
 		launchPage = new LaunchPage(driver);
 		launchPage.goTo();
@@ -100,7 +101,7 @@ public class BaseTest {
 		
 		driver.removeApp("com.bschool.chats");
 		driver.quit();
-		//driver.close();
+		
 	}
 	
 

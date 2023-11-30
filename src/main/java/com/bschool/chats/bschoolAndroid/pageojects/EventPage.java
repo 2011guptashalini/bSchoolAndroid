@@ -244,7 +244,7 @@ public class EventPage extends AbstractComponents {
 	}
 	
 	//Method to fill details of event
-	public void addEventDetails() {
+	public void addEventDetails() throws InterruptedException {
 		
 		waitForAWhile(10);
 		addEventNameElement.sendKeys(EventName);
@@ -263,11 +263,8 @@ public class EventPage extends AbstractComponents {
 		waitForAWhile(60);
 		
 		addEventEndTimeAndDateElement.click();
-		waitForAWhile(60);
-		//scrollDate();
-		
-		addEventSelectDateDoneElement.click();
-		waitForAWhile(10);
+		swipeUpDate(); 
+		waitForAWhile(20);
 		
 		addEventShortDescriptionElement.sendKeys(shortDescription);	
 		waitForAWhile(10);
@@ -286,6 +283,7 @@ public class EventPage extends AbstractComponents {
 		waitForAWhile(10);
 		addEventOKElement.click();	
 		waitForAWhile(20);
+		scroll(ScrollDirection.DOWN, 1.0);
 		scroll(ScrollDirection.DOWN, 1.0);
 		
 	}
