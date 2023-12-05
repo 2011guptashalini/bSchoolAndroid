@@ -54,7 +54,7 @@ public class ChatPage extends AbstractComponents {
 	WebElement closeButtonForSmileys;
 	
 	//Group name
-	@FindBy(xpath="//android.widget.TextView[@text=\"Group Name\"]")
+	@FindBy(xpath="//android.widget.EditText[@content-desc=\"CreateChatsGroupNameText\"]")
 	WebElement groupName;
 	
 	//Group type public
@@ -175,8 +175,8 @@ public class ChatPage extends AbstractComponents {
 		waitForAWhile(10);
 		//SmileyClose();
 		//waitForAWhile(10);
-		//EnterGroupName();
-		//waitForAWhile(10);
+		EnterGroupName();
+		waitForAWhile(10);
 		SelectPublicPrivacy();
 		scroll(ScrollDirection.DOWN, 0.7);
 		waitForAWhile(10);

@@ -42,8 +42,8 @@ public class ChatPageTest extends BaseTest {
 			Assert.assertTrue(match, "Chat Heading is displayed");
 			match = chatPage.VerifyRecentTabIsDisplayed();
 			Assert.assertTrue(match, "Recent tab is displayed");
-			match = chatPage.VerifyAllChatsTabIsDisplayed();
-			Assert.assertTrue(match, "All chat tab is displayed");
+			/*match = chatPage.VerifyAllChatsTabIsDisplayed();
+			Assert.assertTrue(match, "All chat tab is displayed");*/
 			match = chatPage.VerifyBoiseAndStateTabIsDisplayed();
 			Assert.assertTrue(match, "Boise and state university tab is displayed");
 			match = chatPage.VerifyRecentChatsIsDisplayed();

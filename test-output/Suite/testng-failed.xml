@@ -8,19 +8,15 @@
     <classes>
       <class name="com.bschool.chats.bschoolAndroid.tests.EventPageTest">
         <methods>
+          <include name="eventPage_addEventTest"/>
           <include name="logintoApp"/>
           <include name="tearDown"/>
-          <include name="eventPage_readDetails"/>
           <include name="eventPage_editEvent"/>
+          <include name="eventPage_readDetails"/>
+          <include name="sendReports"/>
+          <include name="eventPage_displayedTest"/>
         </methods>
       </class> <!-- com.bschool.chats.bschoolAndroid.tests.EventPageTest -->
-      <class name="com.bschool.chats.bschoolAndroid.tests.ChatPageTest">
-        <methods>
-          <include name="eventPage_displayedTest"/>
-          <include name="logintoApp"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.bschool.chats.bschoolAndroid.tests.ChatPageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

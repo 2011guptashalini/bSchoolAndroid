@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/1</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Dec 01 00:30:59 IST 2023</td>
+<td>Started on:</td><td>Tue Dec 05 22:53:32 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>78 seconds (78509 ms)</td>
+<tr><td>Total time:</td><td>61 seconds (61832 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -82,9 +82,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;14.1&apos;, java.version: &apos;21.0.1&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [5c2ee36e-54f4-4a1b-a9b2-a43fa75fae04, findElement {using=xpath, value=//android.widget.TextView[@text=&quot;Chats&quot;]}]
+Command: [25cd3cb7-2eb0-4ab3-9edf-227769d49a80, findElement {using=xpath, value=//android.widget.EditText[@content-desc=&quot;CreateChatsGroupNameText&quot;]}]
 Capabilities {appium:app: /Users/shalinigupta/Desktop..., appium:appPackage: com.bschool.chats, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/shalinigupta/Desktop..., automationName: UiAutomator2, deviceName: Pixel 7 Pro API 30, platformName: ANDROID}, appium:deviceApiLevel: 30, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 560, appium:deviceScreenSize: 1440x3120, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3.5, appium:platformVersion: 11, appium:statBarHeight: 84, appium:takesScreenshot: true, appium:viewportRect: {height: 2868, left: 0, top: 84, width: 1440}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 5c2ee36e-54f4-4a1b-a9b2-a43fa75fae04
+Session ID: 25cd3cb7-2eb0-4ab3-9edf-227769d49a80
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -100,9 +100,9 @@ Session ID: 5c2ee36e-54f4-4a1b-a9b2-a43fa75fae04
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy12.click(Unknown Source)
-	at com.bschool.chats.bschoolAndroid.AbstractComponents.AbstractComponents.clickChat(AbstractComponents.java:140)
-	at com.bschool.chats.bschoolAndroid.pageojects.ChatPage.createAGroupChat(ChatPage.java:193)
+	at jdk.proxy2/jdk.proxy2.$Proxy12.sendKeys(Unknown Source)
+	at com.bschool.chats.bschoolAndroid.pageojects.ChatPage.EnterGroupName(ChatPage.java:137)
+	at com.bschool.chats.bschoolAndroid.pageojects.ChatPage.createAGroupChat(ChatPage.java:178)
 	at com.bschool.chats.bschoolAndroid.tests.ChatPageTest.chatPage_addAGroup(ChatPageTest.java:51)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -130,15 +130,15 @@ Session ID: 5c2ee36e-54f4-4a1b-a9b2-a43fa75fae04
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1340634558", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1340634558'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+</pre></div><a href='#' onClick='toggleBox("stack-trace310792845", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace310792845'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;14.1&apos;, java.version: &apos;21.0.1&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [5c2ee36e-54f4-4a1b-a9b2-a43fa75fae04, findElement {using=xpath, value=//android.widget.TextView[@text=&quot;Chats&quot;]}]
+Command: [25cd3cb7-2eb0-4ab3-9edf-227769d49a80, findElement {using=xpath, value=//android.widget.EditText[@content-desc=&quot;CreateChatsGroupNameText&quot;]}]
 Capabilities {appium:app: /Users/shalinigupta/Desktop..., appium:appPackage: com.bschool.chats, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/shalinigupta/Desktop..., automationName: UiAutomator2, deviceName: Pixel 7 Pro API 30, platformName: ANDROID}, appium:deviceApiLevel: 30, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 560, appium:deviceScreenSize: 1440x3120, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3.5, appium:platformVersion: 11, appium:statBarHeight: 84, appium:takesScreenshot: true, appium:viewportRect: {height: 2868, left: 0, top: 84, width: 1440}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 5c2ee36e-54f4-4a1b-a9b2-a43fa75fae04
+Session ID: 25cd3cb7-2eb0-4ab3-9edf-227769d49a80
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -154,9 +154,9 @@ Session ID: 5c2ee36e-54f4-4a1b-a9b2-a43fa75fae04
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy12.click(Unknown Source)
-	at com.bschool.chats.bschoolAndroid.AbstractComponents.AbstractComponents.clickChat(AbstractComponents.java:140)
-	at com.bschool.chats.bschoolAndroid.pageojects.ChatPage.createAGroupChat(ChatPage.java:193)
+	at jdk.proxy2/jdk.proxy2.$Proxy12.sendKeys(Unknown Source)
+	at com.bschool.chats.bschoolAndroid.pageojects.ChatPage.EnterGroupName(ChatPage.java:137)
+	at com.bschool.chats.bschoolAndroid.pageojects.ChatPage.createAGroupChat(ChatPage.java:178)
 	at com.bschool.chats.bschoolAndroid.tests.ChatPageTest.chatPage_addAGroup(ChatPageTest.java:51)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -185,8 +185,8 @@ Session ID: 5c2ee36e-54f4-4a1b-a9b2-a43fa75fae04
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>28</td>
-<td>com.bschool.chats.bschoolAndroid.tests.ChatPageTest@3ce1e309</td></tr>
+<td>19</td>
+<td>com.bschool.chats.bschoolAndroid.tests.ChatPageTest@47af7f3d</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -203,9 +203,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;14.1&apos;, java.version: &apos;21.0.1&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [563c6db6-b530-41c4-95c5-a01bb403065c, findElement {using=xpath, value=//android.widget.TextView[@text=&quot;Chats&quot;]}]
+Command: [344f4e55-6d80-41b2-9a24-b1195accf03e, findElement {using=xpath, value=//android.widget.EditText[@content-desc=&quot;CreateChatsGroupNameText&quot;]}]
 Capabilities {appium:app: /Users/shalinigupta/Desktop..., appium:appPackage: com.bschool.chats, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/shalinigupta/Desktop..., automationName: UiAutomator2, deviceName: Pixel 7 Pro API 30, platformName: ANDROID}, appium:deviceApiLevel: 30, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 560, appium:deviceScreenSize: 1440x3120, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3.5, appium:platformVersion: 11, appium:statBarHeight: 84, appium:takesScreenshot: true, appium:viewportRect: {height: 2868, left: 0, top: 84, width: 1440}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 563c6db6-b530-41c4-95c5-a01bb403065c
+Session ID: 344f4e55-6d80-41b2-9a24-b1195accf03e
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -221,9 +221,9 @@ Session ID: 563c6db6-b530-41c4-95c5-a01bb403065c
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy12.click(Unknown Source)
-	at com.bschool.chats.bschoolAndroid.AbstractComponents.AbstractComponents.clickChat(AbstractComponents.java:140)
-	at com.bschool.chats.bschoolAndroid.pageojects.ChatPage.createAGroupChat(ChatPage.java:193)
+	at jdk.proxy2/jdk.proxy2.$Proxy12.sendKeys(Unknown Source)
+	at com.bschool.chats.bschoolAndroid.pageojects.ChatPage.EnterGroupName(ChatPage.java:137)
+	at com.bschool.chats.bschoolAndroid.pageojects.ChatPage.createAGroupChat(ChatPage.java:178)
 	at com.bschool.chats.bschoolAndroid.tests.ChatPageTest.chatPage_addAGroup(ChatPageTest.java:51)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -251,15 +251,15 @@ Session ID: 563c6db6-b530-41c4-95c5-a01bb403065c
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace202064342", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace202064342'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+</pre></div><a href='#' onClick='toggleBox("stack-trace1118414398", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1118414398'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;14.1&apos;, java.version: &apos;21.0.1&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [563c6db6-b530-41c4-95c5-a01bb403065c, findElement {using=xpath, value=//android.widget.TextView[@text=&quot;Chats&quot;]}]
+Command: [344f4e55-6d80-41b2-9a24-b1195accf03e, findElement {using=xpath, value=//android.widget.EditText[@content-desc=&quot;CreateChatsGroupNameText&quot;]}]
 Capabilities {appium:app: /Users/shalinigupta/Desktop..., appium:appPackage: com.bschool.chats, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/shalinigupta/Desktop..., automationName: UiAutomator2, deviceName: Pixel 7 Pro API 30, platformName: ANDROID}, appium:deviceApiLevel: 30, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 560, appium:deviceScreenSize: 1440x3120, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3.5, appium:platformVersion: 11, appium:statBarHeight: 84, appium:takesScreenshot: true, appium:viewportRect: {height: 2868, left: 0, top: 84, width: 1440}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 563c6db6-b530-41c4-95c5-a01bb403065c
+Session ID: 344f4e55-6d80-41b2-9a24-b1195accf03e
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -275,9 +275,9 @@ Session ID: 563c6db6-b530-41c4-95c5-a01bb403065c
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy12.click(Unknown Source)
-	at com.bschool.chats.bschoolAndroid.AbstractComponents.AbstractComponents.clickChat(AbstractComponents.java:140)
-	at com.bschool.chats.bschoolAndroid.pageojects.ChatPage.createAGroupChat(ChatPage.java:193)
+	at jdk.proxy2/jdk.proxy2.$Proxy12.sendKeys(Unknown Source)
+	at com.bschool.chats.bschoolAndroid.pageojects.ChatPage.EnterGroupName(ChatPage.java:137)
+	at com.bschool.chats.bschoolAndroid.pageojects.ChatPage.createAGroupChat(ChatPage.java:178)
 	at com.bschool.chats.bschoolAndroid.tests.ChatPageTest.chatPage_addAGroup(ChatPageTest.java:51)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -306,8 +306,8 @@ Session ID: 563c6db6-b530-41c4-95c5-a01bb403065c
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>26</td>
-<td>com.bschool.chats.bschoolAndroid.tests.ChatPageTest@3ce1e309</td></tr>
+<td>20</td>
+<td>com.bschool.chats.bschoolAndroid.tests.ChatPageTest@47af7f3d</td></tr>
 </table><p>
 </body>
 </html>

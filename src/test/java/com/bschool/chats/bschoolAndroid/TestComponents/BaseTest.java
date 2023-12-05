@@ -1,20 +1,37 @@
 package com.bschool.chats.bschoolAndroid.TestComponents;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Properties;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipOutputStream;
+
+import javax.mail.MessagingException;
+import javax.activation.DataHandler;
+import javax.activation.DataSource;
+import javax.activation.FileDataSource;
+import javax.mail.BodyPart;
+import javax.mail.Message;
+import javax.mail.Multipart;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeBodyPart;
+import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMultipart;
 
 import io.appium.java_client.android.AndroidDriver;
 
 
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
 import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
@@ -116,10 +133,9 @@ public class BaseTest {
 	@AfterMethod(alwaysRun=true)
 	public void tearDown() {
 		
-		driver.removeApp("com.bschool.chats");
+		//driver.removeApp("com.bschool.chats");
 		driver.quit();
 		
 	}
 	
-
 }
