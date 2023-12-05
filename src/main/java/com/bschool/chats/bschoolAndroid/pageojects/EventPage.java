@@ -218,6 +218,10 @@ public class EventPage extends AbstractComponents {
 	//Read comment
 	@FindBy(xpath="//android.widget.TextView[@text=\"asd\"]")
 	WebElement readComment;
+	
+	//Go back to events page 
+	@FindBy(xpath="")
+	WebElement goBack;
 
 	//Methods
 	
@@ -360,6 +364,12 @@ public class EventPage extends AbstractComponents {
     	 sendComment.click();  	 
     	 waitForAWhile(20);
     	 
+    }
+    
+    //Go back to events page
+    public void goBackToEvents()
+    {
+    	goBack.click();
     }
     
     
