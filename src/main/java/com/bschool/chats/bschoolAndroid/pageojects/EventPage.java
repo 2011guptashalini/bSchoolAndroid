@@ -222,6 +222,18 @@ public class EventPage extends AbstractComponents {
 	//Go back to events page 
 	@FindBy(xpath="")
 	WebElement goBack;
+	
+	// Click three dots
+	@FindBy(xpath="//android.widget.TextView[@text=\"...\"]")
+	WebElement threeDots;
+	
+	//Delete event button
+	@FindBy(xpath="//android.widget.TextView[@text=\"Delete\"]")
+	WebElement deleteEvent;
+	
+	//Yes button on delete event confirmation popup
+	@FindBy(xpath="//android.widget.Button[@resource-id=\"android:id/button1\"]")
+	WebElement yesButton;
 
 	//Methods
 	
@@ -299,6 +311,13 @@ public class EventPage extends AbstractComponents {
 		WebElement addedEvent = dynamicXpathGenerator(EventName);
 		addedEvent.click();
 	}
+	
+	public void reachToAddedEvent() {
+		waitForAWhile(10);
+		WebElement addedEvent = dynamicXpathGenerator(EventName);
+	
+	}
+	
 	
 	public void ClickEditButton() {
 		waitForAWhile(10);
@@ -383,7 +402,23 @@ public class EventPage extends AbstractComponents {
 		return match;
 		
 	}
+  
+  //click three dots
+  
+  public void clickThreeDots()
+  {
+	  threeDots.click();
+  }
     
+  public void clickDelete()
+  {
+	  deleteEvent.click();
+  }
+   
+  public void confirmDelete()
+  {
+	  yesButton.click();
+  }
     
     
 	

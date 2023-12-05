@@ -1,5 +1,9 @@
 package com.bschool.chats.bschoolAndroid.pageojects;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -17,6 +21,22 @@ public class ChatPage extends AbstractComponents {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
+	
+	List<String> myGroups = Arrays.asList("MBA Association",
+			"Consulting Club",
+			"Entrepreneurship Society",
+			"Finance Club",
+			"Marketing Association",
+			"Technology and Innovation Club",
+			"Healthcare Management Club",
+			"International Business Club",
+			"Social Impact Club",
+			"Women in Business"
+);
+	Random e = new Random();
+
+    int randomitem = e.nextInt(myGroups.size());
+    String GroupName = myGroups.get(randomitem);
 	
 	//Chat heading
 	@FindBy(xpath="(//android.widget.TextView[@text=\"Chats\"])[1]")
@@ -134,7 +154,7 @@ public class ChatPage extends AbstractComponents {
 	}
 	
 	public void EnterGroupName() {
-		groupName.sendKeys("Test group");
+		groupName.sendKeys(GroupName);
 		
 	}
 	

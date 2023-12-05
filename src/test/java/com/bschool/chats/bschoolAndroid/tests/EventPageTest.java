@@ -46,6 +46,13 @@ public class EventPageTest extends BaseTest {
 		eventPage.createEvent();
 		match = eventPage.VerifyEventIsAdded();
 		Assert.assertTrue(match, "Event is added and displayed");
+		
+		//Deleting the event created while testing
+		eventPage.reachToAddedEvent();
+		eventPage.clickThreeDots();
+		eventPage.clickDelete();
+		eventPage.confirmDelete();
+		
 	}
 	
 	@Test(groups= {"Regression"}, retryAnalyzer=Retry.class)
