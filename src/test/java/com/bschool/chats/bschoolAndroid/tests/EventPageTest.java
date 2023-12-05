@@ -111,7 +111,36 @@ public class EventPageTest extends BaseTest {
 		
 	}
 	
+	
+	@Test(groups= {"Regression"}, retryAnalyzer=Retry.class)
+	public void eventPage_readComments() throws InterruptedException {
+		eventPage = homePage.goToEventPage();
+		eventPage.clickAddEvent();
+		
+		eventPage.addImage();
+		Boolean match = eventPage.VerifyPhotoOptionsDisplayed();
+		Assert.assertTrue(match, "Options to select photo is displayed");
+		
+		match = eventPage.VerifyImageIsUploaded();
+		Assert.assertTrue(match, "Photo is uploaded and app returned back to adding event page");
+		
+		eventPage.addEventDetails();
+		eventPage.createEvent();
+		match = eventPage.VerifyEventIsAdded();
+		Assert.assertTrue(match, "Event is added and displayed");
+		
+		//Open added event
+		eventPage.openAddedEvent();
+		eventPage.navigateDiscussion();
+		eventPage.writeCommentForEvent();
+		match = eventPage.readCommentIsDisplayed();
+		Assert.assertTrue(match, "Event comment is displayed");
+		
+	
+	
 		
 	}
+	
+}
 	
 		

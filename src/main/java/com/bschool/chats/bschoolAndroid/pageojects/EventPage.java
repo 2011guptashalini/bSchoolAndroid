@@ -38,6 +38,8 @@ public class EventPage extends AbstractComponents {
     int randomLinks = l.nextInt(myLinks.size());
     String Link = myLinks.get(randomLinks);
     
+    String eventComment = "Nice Event";
+    
     String shortDescription = "Meeting to connect with MBA students";
     
 	
@@ -201,35 +203,31 @@ public class EventPage extends AbstractComponents {
 	@FindBy(xpath="//android.widget.EditText[@text=\"Write comment here…\"]")
 	WebElement commentTextBox;
 	
+	//Discussion Tab
+	@FindBy(xpath="//android.widget.TextView[@text=\"Discussion\"]")
+	WebElement discussion;
 	
+	//Write comment here text box
+	@FindBy(xpath="//android.widget.EditText[@text=\"Write comment here…\"]")
+	WebElement commentTextbox;
 	
+	//Send comment
+	@FindBy(xpath="//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.ImageView")
+	WebElement sendComment;
+	
+	//Read comment
+	@FindBy(xpath="//android.widget.TextView[@text=\"asd\"]")
+	WebElement readComment;
+
+	//Methods
 	
 	public WebElement dynamicXpathGenerator(String str) {
 		String xpathStr = "\"" + str + "\"";
 		WebElement dynamicXpathEvent = driver.findElement(By.xpath("//android.widget.TextView[@text="+xpathStr+"]"));
 		return dynamicXpathEvent;
 	}
-	/*public WebElement dynamicXpathGeneratorEvent(String str) {
-	String xpathStr = "\"" + str + "\"";
-	WebElement dynamicXpathEvent = driver.findElement(By.xpath("//android.widget.TextView[@text="+xpathStr+"]"));
-	return dynamicXpathEvent;
-}
 	
-	public WebElement dynamicXpathGeneratorAddedLinkOnSave(String str) {
-		String xpathStr = "\"" + str + "\"";
-		WebElement dynamicXpath = driver.findElement(By.xpath("//android.widget.TextView[@text="+xpathStr+"]"));
-		return dynamicXpath;
-	}
-	
-	public WebElement dynamicXpathGeneratorShortDescription(String str) {
-		String xpathStr = "\"" + str + "\"";
-		WebElement dynamicXpath = driver.findElement(By.xpath("//android.widget.TextView[@text="+xpathStr+"]"));
-		return dynamicXpath;
-	}*/
-	
-	
-	
-	
+
 
 	public void clickAddEvent() {
 		addEventElement.click();
@@ -329,7 +327,7 @@ public class EventPage extends AbstractComponents {
 			
 	}
 	
-	// Read description
+	// Read Description
 	
     public String EventDescriptionIs() {
 		
@@ -345,6 +343,39 @@ public class EventPage extends AbstractComponents {
 		return match;
 		
 	}
+    //Navigate to discussion
+    public void navigateDiscussion() {
+    waitForAWhile(20);
+    discussion.click();
+    
+    
+    }
+    
+    //Write comment
+    public void writeCommentForEvent()
+    {
+    	 waitForAWhile(20);
+    	 commentTextbox.sendKeys(eventComment);
+    	 waitForAWhile(20);
+    	 sendComment.click();  	 
+    	 waitForAWhile(20);
+    	 
+    }
+    
+    
+    //Read comment
+    
+  public Boolean readCommentIsDisplayed() {
+		
+		WebElement displayedCommentElement = dynamicXpathGenerator(eventComment);
+		String displayedComment = displayedCommentElement.getText();
+		Boolean match = displayedComment.equals(eventComment);
+		return match;
+		
+	}
+    
+    
+    
 	
 	
 	//Assertions
