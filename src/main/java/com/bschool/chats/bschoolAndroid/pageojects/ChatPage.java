@@ -2,15 +2,19 @@ package com.bschool.chats.bschoolAndroid.pageojects;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.bschool.chats.bschoolAndroid.AbstractComponents.AbstractComponents;
 import com.bschool.chats.bschoolAndroid.AbstractComponents.AbstractComponents.ScrollDirection;
 
+import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 
 public class ChatPage extends AbstractComponents {
@@ -128,6 +132,10 @@ public class ChatPage extends AbstractComponents {
 	//Search member
 	@FindBy(xpath="//android.widget.EditText[@text=\"Search People\"]")
 	WebElement searchMember;
+	
+	//Delete group
+	@FindBy(xpath="//android.view.ViewGroup[@resource-id=\"channel-list-messenger\"]/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup")
+	WebElement deleteGroup;
 	
 
 	public void ClickCreateChatButton() {
@@ -248,6 +256,21 @@ public class ChatPage extends AbstractComponents {
 		Boolean match = recentChats.isDisplayed();
 		return match;
 
+	}
+	
+	public void swipeLeftGroup() throws InterruptedException
+	{
+		RemoteWebElement scrollView = (RemoteWebElement)driver.findElement(AppiumBy.xpath("//android.view.ViewGroup[@resource-id=\"channel-list-messenger\"]/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.widget.ImageView"));
+
+		driver.executeScript("gesture: swipe", Map.of("elementId", scrollView.getId(), "percentage", 10, "direction", "left"));
+		
+		
+		RemoteWebElement tap = (RemoteWebElement)driver.findElement(By.xpath("//android.view.ViewGroup[@resource-id=\"channel-list-messenger\"]/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup"));
+			
+		driver.executeScript("gesture: longPress", Map.of("elementId", tap.getId(), "pressure", 0.5, "duration", 400));
+		waitForAWhile(20);
+		
+		
 	}
 	
 }

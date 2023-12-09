@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results retried="1" ignored="1" total="3" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-06T01:20:08 IST" name="Default suite" finished-at="2023-12-06T01:21:13 IST" duration-ms="65181">
+  <suite started-at="2023-12-09T19:59:55 IST" name="Default suite" finished-at="2023-12-09T19:59:56 IST" duration-ms="658">
     <groups>
       <group name="Regression">
         <method signature="EventPageTest.eventPage_addEventTest()[pri:0, instance:com.bschool.chats.bschoolAndroid.tests.EventPageTest@5af3afd9]" name="eventPage_addEventTest" class="com.bschool.chats.bschoolAndroid.tests.EventPageTest"/>
@@ -11,27 +11,50 @@
         <method signature="EventPageTest.eventPage_addEventTest()[pri:0, instance:com.bschool.chats.bschoolAndroid.tests.EventPageTest@5af3afd9]" name="eventPage_addEventTest" class="com.bschool.chats.bschoolAndroid.tests.EventPageTest"/>
       </group> <!-- Smoke -->
     </groups>
-    <test started-at="2023-12-06T01:20:08 IST" name="Default test" finished-at="2023-12-06T01:21:13 IST" duration-ms="65181">
+    <test started-at="2023-12-09T19:59:55 IST" name="Default test" finished-at="2023-12-09T19:59:56 IST" duration-ms="658">
       <class name="com.bschool.chats.bschoolAndroid.tests.EventPageTest">
-        <test-method is-config="true" signature="logintoApp()[pri:0, instance:com.bschool.chats.bschoolAndroid.tests.EventPageTest@5af3afd9]" started-at="2023-12-06T01:20:08 IST" name="logintoApp" finished-at="2023-12-06T01:20:20 IST" duration-ms="11882" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logintoApp -->
-        <test-method retried="true" signature="eventPage_addEventTest()[pri:0, instance:com.bschool.chats.bschoolAndroid.tests.EventPageTest@5af3afd9]" started-at="2023-12-06T01:20:20 IST" name="eventPage_addEventTest" finished-at="2023-12-06T01:20:59 IST" duration-ms="38726" status="SKIP">
-          <exception class="java.lang.AssertionError">
+        <test-method is-config="true" signature="logintoApp()[pri:0, instance:com.bschool.chats.bschoolAndroid.tests.EventPageTest@5af3afd9]" started-at="2023-12-09T19:59:55 IST" name="logintoApp" finished-at="2023-12-09T19:59:56 IST" duration-ms="643" status="FAIL">
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
             <message>
-              <![CDATA[Event is now deleted. expected [false] but found [true]]]>
+              <![CDATA[Could not start a new session. Response code 400. Message: platform name is missing in the capabilities 
+Host info: host: 'Shalinis-MacBook-Pro.local', ip: '2401:4900:1c64:e25b:e47e:937e:d0b3:6989%en0'
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.1', java.version: '21.0.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:app=lt://APP10160252091701966664638641, appium:console=true, appium:deviceName=Galaxy S20, appium:deviceOrientation=PORTRAIT, appium:devicelog=true, appium:isRealMobile=true, appium:name=Bschool1, appium:network=false, platformName=ANDROID, appium:platformVersion=11, appium:visual=true}], desiredCapabilities=Capabilities {app: lt://APP1016025209170196666..., console: true, deviceName: Galaxy S20, deviceOrientation: PORTRAIT, devicelog: true, isRealMobile: true, name: Bschool1, network: false, platformName: ANDROID, platformVersion: 11, visual: true}}]
+Capabilities {app: lt://APP1016025209170196666..., console: true, deviceName: Galaxy S20, deviceOrientation: PORTRAIT, devicelog: true, isRealMobile: true, name: Bschool1, network: false, platformName: ANDROID, platformVersion: 11, visual: true}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Event is now deleted. expected [false] but found [true]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertFalse(Assert.java:79)
-at com.bschool.chats.bschoolAndroid.tests.EventPageTest.eventPage_addEventTest(EventPageTest.java:54)
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: platform name is missing in the capabilities 
+Host info: host: 'Shalinis-MacBook-Pro.local', ip: '2401:4900:1c64:e25b:e47e:937e:d0b3:6989%en0'
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.1', java.version: '21.0.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:app=lt://APP10160252091701966664638641, appium:console=true, appium:deviceName=Galaxy S20, appium:deviceOrientation=PORTRAIT, appium:devicelog=true, appium:isRealMobile=true, appium:name=Bschool1, appium:network=false, platformName=ANDROID, appium:platformVersion=11, appium:visual=true}], desiredCapabilities=Capabilities {app: lt://APP1016025209170196666..., console: true, deviceName: Galaxy S20, deviceOrientation: PORTRAIT, devicelog: true, isRealMobile: true, name: Bschool1, network: false, platformName: ANDROID, platformVersion: 11, visual: true}}]
+Capabilities {app: lt://APP1016025209170196666..., console: true, deviceName: Galaxy S20, deviceOrientation: PORTRAIT, devicelog: true, isRealMobile: true, name: Bschool1, network: false, platformName: ANDROID, platformVersion: 11, visual: true}
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:140)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:133)
+at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:102)
+at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:177)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:268)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:164)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:90)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:102)
+at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:109)
+at com.bschool.chats.bschoolAndroid.TestComponents.BaseTest.initializeDriver(BaseTest.java:96)
+at com.bschool.chats.bschoolAndroid.TestComponents.BaseTest.logintoApp(BaseTest.java:113)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
 at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
 at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
@@ -56,54 +79,44 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- eventPage_addEventTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.bschool.chats.bschoolAndroid.tests.EventPageTest@5af3afd9]" started-at="2023-12-06T01:20:59 IST" name="tearDown" finished-at="2023-12-06T01:20:59 IST" duration-ms="212" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="logintoApp()[pri:0, instance:com.bschool.chats.bschoolAndroid.tests.EventPageTest@5af3afd9]" started-at="2023-12-06T01:20:59 IST" name="logintoApp" finished-at="2023-12-06T01:21:13 IST" duration-ms="14224" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        </test-method> <!-- logintoApp -->
+        <test-method signature="eventPage_addEventTest()[pri:0, instance:com.bschool.chats.bschoolAndroid.tests.EventPageTest@5af3afd9]" started-at="2023-12-09T19:59:56 IST" name="eventPage_addEventTest" finished-at="2023-12-09T19:59:56 IST" duration-ms="0" status="SKIP">
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
             <message>
-              <![CDATA[An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.15.0', revision: '1d14b5521b'
+              <![CDATA[Could not start a new session. Response code 400. Message: platform name is missing in the capabilities 
+Host info: host: 'Shalinis-MacBook-Pro.local', ip: '2401:4900:1c64:e25b:e47e:937e:d0b3:6989%en0'
+Build info: version: '4.16.1', revision: '9b4c83354e'
 System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.1', java.version: '21.0.1'
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [ca7b0345-59a2-4cab-acdc-a88c6d677151, findElement {using=xpath, value=//android.widget.TextView[@content-desc="SkipVideoButton"]}]
-Capabilities {appium:app: /Users/shalinigupta/Desktop..., appium:appPackage: com.bschool.chats, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/shalinigupta/Desktop..., automationName: UiAutomator2, deviceName: Pixel 7 Pro API 30, platformName: ANDROID}, appium:deviceApiLevel: 30, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 560, appium:deviceScreenSize: 1440x3120, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3.5, appium:platformVersion: 11, appium:statBarHeight: 84, appium:takesScreenshot: true, appium:viewportRect: {height: 2868, left: 0, top: 84, width: 1440}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: ca7b0345-59a2-4cab-acdc-a88c6d677151]]>
+Command: [null, newSession {capabilities=[{appium:app=lt://APP10160252091701966664638641, appium:console=true, appium:deviceName=Galaxy S20, appium:deviceOrientation=PORTRAIT, appium:devicelog=true, appium:isRealMobile=true, appium:name=Bschool1, appium:network=false, platformName=ANDROID, appium:platformVersion=11, appium:visual=true}], desiredCapabilities=Capabilities {app: lt://APP1016025209170196666..., console: true, deviceName: Galaxy S20, deviceOrientation: PORTRAIT, devicelog: true, isRealMobile: true, name: Bschool1, network: false, platformName: ANDROID, platformVersion: 11, visual: true}}]
+Capabilities {app: lt://APP1016025209170196666..., console: true, deviceName: Galaxy S20, deviceOrientation: PORTRAIT, devicelog: true, isRealMobile: true, name: Bschool1, network: false, platformName: ANDROID, platformVersion: 11, visual: true}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.15.0', revision: '1d14b5521b'
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: platform name is missing in the capabilities 
+Host info: host: 'Shalinis-MacBook-Pro.local', ip: '2401:4900:1c64:e25b:e47e:937e:d0b3:6989%en0'
+Build info: version: '4.16.1', revision: '9b4c83354e'
 System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.1', java.version: '21.0.1'
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [ca7b0345-59a2-4cab-acdc-a88c6d677151, findElement {using=xpath, value=//android.widget.TextView[@content-desc="SkipVideoButton"]}]
-Capabilities {appium:app: /Users/shalinigupta/Desktop..., appium:appPackage: com.bschool.chats, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/shalinigupta/Desktop..., automationName: UiAutomator2, deviceName: Pixel 7 Pro API 30, platformName: ANDROID}, appium:deviceApiLevel: 30, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 560, appium:deviceScreenSize: 1440x3120, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3.5, appium:platformVersion: 11, appium:statBarHeight: 84, appium:takesScreenshot: true, appium:viewportRect: {height: 2868, left: 0, top: 84, width: 1440}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: ca7b0345-59a2-4cab-acdc-a88c6d677151
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+Command: [null, newSession {capabilities=[{appium:app=lt://APP10160252091701966664638641, appium:console=true, appium:deviceName=Galaxy S20, appium:deviceOrientation=PORTRAIT, appium:devicelog=true, appium:isRealMobile=true, appium:name=Bschool1, appium:network=false, platformName=ANDROID, appium:platformVersion=11, appium:visual=true}], desiredCapabilities=Capabilities {app: lt://APP1016025209170196666..., console: true, deviceName: Galaxy S20, deviceOrientation: PORTRAIT, devicelog: true, isRealMobile: true, name: Bschool1, network: false, platformName: ANDROID, platformVersion: 11, visual: true}}]
+Capabilities {app: lt://APP1016025209170196666..., console: true, deviceName: Galaxy S20, deviceOrientation: PORTRAIT, devicelog: true, isRealMobile: true, name: Bschool1, network: false, platformName: ANDROID, platformVersion: 11, visual: true}
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:140)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:133)
+at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:102)
+at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:177)
 at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy12.click(Unknown Source)
-at com.bschool.chats.bschoolAndroid.pageojects.LaunchPage.ClickSkip(LaunchPage.java:31)
-at com.bschool.chats.bschoolAndroid.pageojects.LaunchPage.goTo(LaunchPage.java:42)
-at com.bschool.chats.bschoolAndroid.TestComponents.BaseTest.logintoApp(BaseTest.java:86)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:268)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:164)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:90)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:102)
+at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:109)
+at com.bschool.chats.bschoolAndroid.TestComponents.BaseTest.initializeDriver(BaseTest.java:96)
+at com.bschool.chats.bschoolAndroid.TestComponents.BaseTest.logintoApp(BaseTest.java:113)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -112,8 +125,8 @@ at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigIn
 at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
 at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
 at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:248)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
 at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
@@ -136,73 +149,52 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logintoApp -->
-        <test-method signature="eventPage_addEventTest()[pri:0, instance:com.bschool.chats.bschoolAndroid.tests.EventPageTest@5af3afd9]" started-at="2023-12-06T01:21:13 IST" name="eventPage_addEventTest" finished-at="2023-12-06T01:21:13 IST" duration-ms="2" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchSessionException">
-            <message>
-              <![CDATA[Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '4.15.0', revision: '1d14b5521b'
-System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.1', java.version: '21.0.1'
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [null, findElement {using=xpath, value=//android.widget.TextView[@text="Events"]}]
-Capabilities {appium:app: /Users/shalinigupta/Desktop..., appium:appPackage: com.bschool.chats, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/shalinigupta/Desktop..., automationName: UiAutomator2, deviceName: Pixel 7 Pro API 30, platformName: ANDROID}, appium:deviceApiLevel: 30, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 560, appium:deviceScreenSize: 1440x3120, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3.5, appium:platformVersion: 11, appium:statBarHeight: 84, appium:takesScreenshot: true, appium:viewportRect: {height: 2868, left: 0, top: 84, width: 1440}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '4.15.0', revision: '1d14b5521b'
-System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.1', java.version: '21.0.1'
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [null, findElement {using=xpath, value=//android.widget.TextView[@text="Events"]}]
-Capabilities {appium:app: /Users/shalinigupta/Desktop..., appium:appPackage: com.bschool.chats, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/shalinigupta/Desktop..., automationName: UiAutomator2, deviceName: Pixel 7 Pro API 30, platformName: ANDROID}, appium:deviceApiLevel: 30, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 560, appium:deviceScreenSize: 1440x3120, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3.5, appium:platformVersion: 11, appium:statBarHeight: 84, appium:takesScreenshot: true, appium:viewportRect: {height: 2868, left: 0, top: 84, width: 1440}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:152)
-at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy12.click(Unknown Source)
-at com.bschool.chats.bschoolAndroid.AbstractComponents.AbstractComponents.clickEvents(AbstractComponents.java:136)
-at com.bschool.chats.bschoolAndroid.pageojects.HomePage.goToEventPage(HomePage.java:33)
-at com.bschool.chats.bschoolAndroid.tests.EventPageTest.eventPage_addEventTest(EventPageTest.java:36)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:248)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- eventPage_addEventTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.bschool.chats.bschoolAndroid.tests.EventPageTest@5af3afd9]" started-at="2023-12-06T01:21:13 IST" name="tearDown" finished-at="2023-12-06T01:21:13 IST" duration-ms="107" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.bschool.chats.bschoolAndroid.tests.EventPageTest@5af3afd9]" started-at="2023-12-09T19:59:56 IST" name="tearDown" finished-at="2023-12-09T19:59:56 IST" duration-ms="1" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "io.appium.java_client.android.AndroidDriver.quit()" because "com.bschool.chats.bschoolAndroid.TestComponents.BaseTest.driver" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "io.appium.java_client.android.AndroidDriver.quit()" because "com.bschool.chats.bschoolAndroid.TestComponents.BaseTest.driver" is null
+at com.bschool.chats.bschoolAndroid.TestComponents.BaseTest.tearDown(BaseTest.java:166)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

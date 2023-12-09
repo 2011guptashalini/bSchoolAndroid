@@ -4,6 +4,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 
 import org.openqa.selenium.By;
@@ -85,6 +86,22 @@ public class EventPage extends AbstractComponents {
 	//Add recent photo
 	@FindBy(xpath="//android.widget.ImageView[@resource-id=\"com.google.android.documentsui:id/icon_thumb\"]")
 	WebElement addEventRecentElement;
+	
+	//Photo click
+	@FindBy(xpath="//android.widget.TextView[@content-desc=\"Photos\"]")
+	WebElement photos;
+	
+	// Select photo
+	@FindBy(xpath="//android.view.View[@resource-id=\"com.google.android.apps.photos:id/image\"]")
+	WebElement selectPhoto;
+	
+	//cancel photo
+	@FindBy(xpath="//android.widget.ImageView[@content-desc=\"Cancel\"]")
+	WebElement cancelPhoto;
+	
+	//Back button
+	@FindBy(xpath="//android.widget.ImageButton[@content-desc=\"Navigate up\"]")
+	WebElement navigateUp;
 	
 	//Event Name Text box
 	@FindBy(xpath="//android.widget.EditText[@content-desc=\"EventName\"]")
@@ -234,6 +251,8 @@ public class EventPage extends AbstractComponents {
 	//Yes button on delete event confirmation popup
 	@FindBy(xpath="//android.widget.Button[@resource-id=\"android:id/button1\"]")
 	WebElement yesButton;
+	
+
 
 	//Methods
 	
@@ -250,6 +269,17 @@ public class EventPage extends AbstractComponents {
 	}
 	
 	public void addImage() {
+		addEvenAddImageElement.click();
+		waitForAWhile(30);
+		photos.click();
+		waitForAWhile(30);
+		selectPhoto.click();
+		waitForAWhile(30);
+		cancelPhoto.click();
+		waitForAWhile(30);
+		//driver.executeScript("mobile: pressKey", Map.ofEntries(Map.entry("keycode", 4)));
+		navigateUp.click();
+		waitForAWhile(30);
 		addEvenAddImageElement.click();
 		waitForAWhile(30);
 		addEventRecentElement.click();
