@@ -18,7 +18,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import com.bschool.chats.bschoolAndroid.pageojects.*;
 
 
-public class BaseTest {
+public class BaseTestBS {
 	
 	public static AndroidDriver driver;
 	public static AndroidDriver driver1;
@@ -50,6 +50,7 @@ public class BaseTest {
 	      DesiredCapabilities capabilities = new DesiredCapabilities();
 	      //capabilities.setCapability("autoGrantPermissions", true);
 	      capabilities.setCapability("os_version", "13.0");
+	      capabilities.setCapability("interactiveDebugging", true);
 	      capabilities.setCapability("deviceName", "Google Pixel 7 Pro");
 	      capabilities.setCapability("app", "bs://ba39209dbcf5e0eba6b4cb3e891382550ac401e4");
 	      capabilities.setCapability("project", "bschool");
@@ -134,7 +135,7 @@ public class BaseTest {
 	public void tearDown() {
 		
 		//driver.removeApp("com.bschool.chats");
-		driver.quit();
+		driver.close();
 		
 	}
 	

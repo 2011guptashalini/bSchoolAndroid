@@ -13,11 +13,11 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.bschool.chats.bschoolAndroid.Data.DataReader;
-import com.bschool.chats.bschoolAndroid.TestComponents.BaseTest;
+import com.bschool.chats.bschoolAndroid.TestComponents.BaseTestBS;
 import com.bschool.chats.bschoolAndroid.TestComponents.BaseTestLT;
 import com.bschool.chats.bschoolAndroid.TestComponents.Retry;
 
-public class EventPageTest extends BaseTest {
+public class EventPageTest extends BaseTestBS {
 	@Test(groups= {"Smoke", "Regression"}, retryAnalyzer=Retry.class)
 	public void eventPage_displayedTest() 
 	{			
@@ -45,13 +45,14 @@ public class EventPageTest extends BaseTest {
 		
 		eventPage.addEventDetails();
 		eventPage.createEvent();
+		//eventPage = homePage.goToEventPage();
 		Boolean match = eventPage.VerifyEventIsAdded();
 		Assert.assertTrue(match, "Event is added and displayed");
 		
 		//Deleting the event created while testing
-		eventPage.reachToAddedEvent();
-		eventPage.clickThreeDots();
-		eventPage.clickDelete();
+		//eventPage.reachToAddedEvent();
+		//eventPage.clickThreeDots();
+		//eventPage.clickDelete();
 		//eventPage.confirmDelete();
 		
 	}

@@ -280,7 +280,7 @@ public class EventPage extends AbstractComponents {
 	
 	 public void addImage() throws IOException, InterruptedException {
 	    	addEvenAddImageElement.click();
-			//driver.pullFile("/sdcard/Pictures/photo.jpg");
+			driver.pullFile("/sdcard/Pictures/s8-tweet.jpg");
 			//if(listView.size()>0)
 			//{
 			    listView.get(0).click();
@@ -337,10 +337,10 @@ public class EventPage extends AbstractComponents {
 		addEventDenyElement.click();
 		waitForAWhile(10);
 		addEventOKElement.click();	
-		waitForAWhile(20);
+		waitForAWhile(40);
 		scroll(ScrollDirection.DOWN, 1.0);
 		scroll(ScrollDirection.DOWN, 1.0);
-		
+		scroll(ScrollDirection.DOWN, 1.0);
 	}
 	
 	
@@ -501,6 +501,8 @@ public class EventPage extends AbstractComponents {
 	
 	public Boolean VerifyEventIsAdded() {
 		
+		scroll(ScrollDirection.DOWN, 1);
+		scroll(ScrollDirection.DOWN, 1);
 		WebElement addedEvent = dynamicXpathGenerator(EventName);
 		Boolean match = addedEvent.isDisplayed();
 		return match;

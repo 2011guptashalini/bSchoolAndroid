@@ -38,7 +38,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import com.bschool.chats.bschoolAndroid.pageojects.*;
 
-public class BaseTest2 {
+public class BaseTestLocal {
 	
 	public static AndroidDriver driver;
 	public static AndroidDriver driver1;
