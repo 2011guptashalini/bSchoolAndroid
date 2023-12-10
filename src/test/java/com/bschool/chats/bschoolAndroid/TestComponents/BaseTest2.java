@@ -1,24 +1,44 @@
 package com.bschool.chats.bschoolAndroid.TestComponents;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.net.URI;
 import java.net.URISyntaxException;
-import java.net.URL;
 import java.util.Properties;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipOutputStream;
+
+import javax.mail.MessagingException;
+import javax.activation.DataHandler;
+import javax.activation.DataSource;
+import javax.activation.FileDataSource;
+import javax.mail.BodyPart;
+import javax.mail.Message;
+import javax.mail.Multipart;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeBodyPart;
+import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMultipart;
+
 import io.appium.java_client.android.AndroidDriver;
+
+
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.apache.commons.io.FileUtils;
-
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
 import com.bschool.chats.bschoolAndroid.pageojects.*;
 
-
-public class BaseTest {
+public class BaseTest2 {
 	
 	public static AndroidDriver driver;
 	public static AndroidDriver driver1;
@@ -37,42 +57,22 @@ public class BaseTest {
 		
 		//Path to apk file
 		        
-				//String apkPath = System.getProperty("user.dir")+"/app-debug.apk";	
+				String apkPath = System.getProperty("user.dir")+"/app-debug.apk";	
+				DesiredCapabilities cap = new DesiredCapabilities();
+				cap.setCapability("deviceName", deviceName);
+				cap.setCapability("platformName", "Android"); 
+				cap.setCapability("appium:automationName", "UiAutomator2"); 
+				cap.setCapability("app", apkPath);
+				
+				driver = new AndroidDriver(new URI("http://127.0.0.1:4723/").toURL(), cap);
+						
+				// Specify the path of the photo you want to send
+				String photoPath = System.getProperty("user.dir")+"//testphoto.jpeg";
+				File photo = new File(photoPath);
 		        
-		  String userName = "shalinig_Io3WYc";
-	      String accessKey = "eTWGdzWxEcL1fzKqGGaD";
-	     
-	     // String buildName = System.getenv("BROWSERSTACK_BUILD_NAME");
-	//      String browserstackLocalIdentifier = System.getenv("BROWSERSTACK_LOCAL_IDENTIFIER");
-	      //String app = System.getenv("BROWSERSTACK_APP_ID");
-	
-	      
-	      DesiredCapabilities capabilities = new DesiredCapabilities();
-	      //capabilities.setCapability("autoGrantPermissions", true);
-	      capabilities.setCapability("os_version", "13.0");
-	      capabilities.setCapability("deviceName", "Google Pixel 7 Pro");
-	      capabilities.setCapability("app", "bs://ba39209dbcf5e0eba6b4cb3e891382550ac401e4");
-	      capabilities.setCapability("project", "bschool");
-	      capabilities.setCapability("build", "debug");
-	      capabilities.setCapability("name", "bSchool");
-	      capabilities.setCapability("browserstack.appium_version", "1.22.0");
-
-	
-	//      URL url = new URL("https://hub-cloud.browserstack.com/wd/hub");
-	//      URL url = new URL("https://hub.browserstack.com/wd/hub");
-	      URL url = new URL("https://"+userName+":"+accessKey+"@hub-cloud.browserstack.com/wd/hub");
-	
-	      driver = new AndroidDriver(url, capabilities);
-	              
-   
- 
-		// Specify the path of the photo you want to send
-		//String photoPath = System.getProperty("user.dir")+"//testphoto.jpeg";
-		//File photo = new File(photoPath);
-        
-        // Push the photo file to the device
-        //driver.pushFile("/sdcard/Pictures/photo.jpg", photo);
-		return driver;
+		        // Push the photo file to the device
+		        driver.pushFile("/sdcard/DCIM/Camera/photo.jpg", photo);
+				return driver;
 	}
 	
 	

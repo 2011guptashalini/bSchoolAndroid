@@ -1,5 +1,6 @@
 package com.bschool.chats.bschoolAndroid.pageojects;
 
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.Arrays;
@@ -84,8 +85,9 @@ public class EventPage extends AbstractComponents {
 	WebElement addEvenPhotoElement;
 	
 	//Add recent photo
-	@FindBy(xpath="//android.widget.ImageView[@resource-id=\"com.google.android.documentsui:id/icon_thumb\"]")
-	WebElement addEventRecentElement;
+	//@FindBy(xpath="//android.widget.ImageView[@resource-id=\"com.google.android.documentsui:id/icon_thumb\"]")
+	//@FindBy(id="com.google.android.providers.media.module:id/icon_thumbnail")
+	//WebElement addEventRecentElement;
 	
 	//Photo click
 	@FindBy(xpath="//android.widget.TextView[@content-desc=\"Photos\"]")
@@ -252,6 +254,14 @@ public class EventPage extends AbstractComponents {
 	@FindBy(xpath="//android.widget.Button[@resource-id=\"android:id/button1\"]")
 	WebElement yesButton;
 	
+	//List view
+  	@FindBy(xpath="//android.widget.TextView[@content-desc=\"List view\"]")
+  	List<WebElement> listView;
+  	
+  	//Pick photo
+  	@FindBy(xpath="//android.widget.TextView[@resource-id=\"android:id/title\" and @text=\"s8-tweet.jpg\"]")
+  	WebElement pickPhoto;
+	
 
 
 	//Methods
@@ -268,24 +278,24 @@ public class EventPage extends AbstractComponents {
 		addEventElement.click();
 	}
 	
-	public void addImage() {
-		addEvenAddImageElement.click();
-		waitForAWhile(30);
-		photos.click();
-		waitForAWhile(30);
-		selectPhoto.click();
-		waitForAWhile(30);
-		cancelPhoto.click();
-		waitForAWhile(30);
-		//driver.executeScript("mobile: pressKey", Map.ofEntries(Map.entry("keycode", 4)));
-		navigateUp.click();
-		waitForAWhile(30);
-		addEvenAddImageElement.click();
-		waitForAWhile(30);
-		addEventRecentElement.click();
-		
-			
-	}
+	 public void addImage() throws IOException, InterruptedException {
+	    	addEvenAddImageElement.click();
+			//driver.pullFile("/sdcard/Pictures/photo.jpg");
+			//if(listView.size()>0)
+			//{
+			    listView.get(0).click();
+				waitForAWhile(30);
+				pickPhoto.click();
+		        waitForAWhile(30);
+		        
+			//}
+			//else 
+			//{
+			//	addEventRecentElement.click();
+			//	waitForAWhile(30);
+		        
+			//}
+	 }
 	
 	//Method to fill details of event
 	public void addEventDetails() throws InterruptedException {
@@ -307,8 +317,9 @@ public class EventPage extends AbstractComponents {
 		waitForAWhile(60);
 		
 		addEventEndTimeAndDateElement.click();
-		swipeUpDate(); 
+		//swipeUpDate(); 
 		waitForAWhile(20);
+		addEventSelectDateDoneElement.click();
 		
 		addEventShortDescriptionElement.sendKeys(shortDescription);	
 		waitForAWhile(10);
@@ -455,12 +466,12 @@ public class EventPage extends AbstractComponents {
 	
 	//Assertions
 	
-	public Boolean VerifyPhotoOptionsDisplayed() {
+	//public Boolean VerifyPhotoOptionsDisplayed() {
 
-		Boolean match = addEventRecentElement.isDisplayed();
-		return match;
+	//	Boolean match = addEventRecentElement.isDisplayed();
+	//	return match;
 
-	}
+	//}
 	
 	public Boolean VerifyImageIsUploaded() {
 
